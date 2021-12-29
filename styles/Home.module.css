@@ -19,11 +19,14 @@
 
 .header {
   display: flex;
+  position: sticky;
+  top: 0;
   justify-content: space-between;
   /* justify-content: flex-end;*/
   align-items: center;
   padding: 10px 10%;
   background-color: #ffffff;
+  min-width: 100%;
   box-shadow: 0px 0px 10px 0 rgba(209, 209, 209, 0.8);
 }
 

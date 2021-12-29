@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
+import Link from 'next/link'
 
 export default function ReactNavbar() {
   const [width, setWidth] = useState(null);
@@ -32,7 +33,9 @@ export default function ReactNavbar() {
         <h1 className={styles.logo}>1Kart</h1>
         <nav className={styles.nav}>
           <ul className={styles.nav_links}>
-            <li className={styles.li}><a className={styles.a} href="#">My Kart</a></li>
+            <li className={styles.li}>
+              <Link href='/Kart'>Kart</Link>
+            </li>
             <li className={styles.li}><a className={styles.a} href="#">Subcarts</a></li>
             <li className={styles.li}><a className={styles.a} href="#">My Brands</a></li>
             <li className={styles.li}><a className={styles.a} href="#">Shipping</a></li>
