@@ -17,6 +17,7 @@
   font-size: 2rem;
 }
 
+/* This section is for the navbar */
 .header {
   display: flex;
   position: sticky;
@@ -24,8 +25,8 @@
   justify-content: space-between;
   /* justify-content: flex-end;*/
   align-items: center;
-  padding: 10px 10%;
-  background-color: #ffffff;
+  padding: 0px 10%;
+  background: linear-gradient(rgb(244, 250, 255), rgb(255, 255, 255));
   min-width: 100%;
   box-shadow: 0px 0px 10px 0 rgba(209, 209, 209, 0.8);
 }
@@ -75,6 +76,29 @@
 
 .button:hover {
   background-color: rgba(155, 227, 255, 0.8);
+}
+
+/* This section has the table css */
+
+.table {
+  min-width: 100%;
+}
+
+.thead {
+  font-weight: bolder;
+}
+
+.th {
+  background-color: #fff;
+  align-content: center;
+}
+
+.tbody {
+  text-align: center;
+}
+
+.tb {
+  text-align: center;
 }
 
 .footer {
