@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Home.module.css'
+import styles from '../styles/Home.module.scss'
 import ReactNavbar from '../components/ReactNavbar'
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
