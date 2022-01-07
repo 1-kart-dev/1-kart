@@ -36,7 +36,9 @@ export default function ReactNavbar() {
             <li className={styles.li}>
               <Link href='/Kart'>Kart</Link>
             </li>
-            <li className={styles.li}><a className={styles.a} href="#">Subcarts</a></li>
+            <li className={styles.li}>
+              <Link href='/SubKarts'>SubKarts</Link>
+            </li>
             <li className={styles.li}><a className={styles.a} href="#">My Brands</a></li>
             <li className={styles.li}><a className={styles.a} href="#">Shipping</a></li>
             <li className={styles.li}><a className={styles.a} href="#">History</a></li>

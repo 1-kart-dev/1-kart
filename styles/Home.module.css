@@ -78,28 +78,94 @@
   background-color: rgba(155, 227, 255, 0.8);
 }
 
-/* This section has the table css */
+/* This section has the kart css */
 
-.table {
+.tableContainer {
+  width: 60%;
+  border-radius: 2rem;
+  border: 0.1rem solid #B5B0AF;
+  padding: .5rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.itemContainer {
+  margin: auto;
+  display: inline-block;
+  border: 0.1rem solid #8FADF9;
+  font-family: 'Courier New', Courier, monospace;
+  margin-bottom: .5rem;
   min-width: 100%;
 }
 
-.thead {
-  font-weight: bolder;
+.logoContainer {
+  padding: .6rem;
+  margin: auto;
+  min-width: none;
+  max-width: 20%;
+  float: left;
 }
 
-.th {
-  background-color: #fff;
-  align-content: center;
+.imgContainer {
+  padding: .6rem;
+  margin: auto;
+  min-width: none;
+  max-width: 20%;
+  float: left;
 }
 
-.tbody {
-  text-align: center;
+.itemDescr {
+  padding: .6rem;
+  font-size: .7rem;
+  margin: auto;
+  text-align: left;
+  vertical-align: top;
+  float: left;
+  min-width: none;
+  max-width: 30%;
 }
 
-.tb {
-  text-align: center;
+.itemMisc {
+  padding: .6rem;
+  font-size: .7rem;
+  margin: auto;
+  vertical-align: bottom;
+  float: left;
+  min-width: none;
+  max-width: 30%;
 }
+
+.divider {
+  width: .3rem;
+  height: auto;
+  display: inline-block;
+}
+
+.delete {
+  border: .1rem solid #f44336;
+  background-color: white;
+  font-family: 'Courier New', Courier, monospace;
+  transition-duration: 0.4s;
+}
+
+.moveTo {
+  background-color: white;
+  border: .1rem solid #8FADF9;
+  font-family: 'Courier New', Courier, monospace;
+  transition-duration: 0.4s;
+}
+
+.delete:hover {
+  background-color: #f44336;
+  color: white;
+}
+
+.moveTo:hover {
+  background-color: #8FADF9;
+  color: white;
+}
+
+/* IDK what this is for */
 
 .footer {
   display: flex;
@@ -202,4 +268,32 @@
     width: 100%;
     flex-direction: column;
   }
+}
+
+/* SubKarts */
+
+.container2 {
+  padding: 0 2rem;
+  text-align: center;
+}
+
+.kartContainer {
+  border-radius: 2rem;
+  border: 0.1rem solid #B5B0AF;
+  padding: .5rem;
+  margin-top: 2rem;
+  width: 60%;
+  margin: 1rem auto;
+}
+
+.itemContainer1 {
+  border-top: 0.1rem solid #B5B0AF;
+}
+
+.itemContainer1 h2 + h3 {
+  margin-top: -0.6rem;
+}
+
+.form {
+  padding-top: .5rem;
 }
