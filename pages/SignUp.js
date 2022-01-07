@@ -1,52 +1,51 @@
 import React from 'react';
-import { useFormik } from 'formik';
 import styles from '../styles/Home.module.css'
 import Link from 'next/link'
 
 export default function SignUp() {
-    const formik = useFormik({
-        initialValues: {
-          firstName: '',
-          lastName: '',
-          email: '',
-        }
-    });
     return(
         <div className = {styles.formPage}>
             <div className = {styles.formContainer}>
                 <form>
                     <h2>Sign Up</h2>
                     <div className = {styles.form1}>
-                        <label htmlFor="firstName">First Name</label>
-                        <input
-                            id="firstName"
-                            name="firstName"
+                        <label for="name">Name:</label><br></br>
+                        <input className={styles.input1}
+                            id="name"
+                            name="name"
                             type="text"
-                            value={formik.values.firstName}
-                        />
+                        /><br></br>
                     </div>
 
                     <div className = {styles.form2}>
-                        <label htmlFor="lastName">Last Name</label>
-                        <input
-                            id="lastName"
-                            name="lastName"
-                            type="text"
-                            value={formik.values.lastName}
-                        />
-                    </div>
-
-                    <div className = {styles.form3}>
-                        <label htmlFor="email">Email Address</label>
-                        <input
+                        <label for="email">Email Address:</label><br></br>
+                        <input className={styles.input2}
                             id="email"
                             name="email"
                             type="email"
-                            value={formik.values.email}
-                        />
+                        /><br></br>
                     </div>
+
+                    <div className = {styles.form3}>
+                        <label for="password">Enter Password:</label><br></br>
+                        <input className={styles.input3}
+                            id="password"
+                            name="password"
+                            type="password"
+                        /><br></br>
+                    </div>
+
+                    <div className = {styles.form3}>
+                        <label for="confirm">Confirm Password:</label><br></br>
+                        <input className={styles.input4}
+                            id="confirm"
+                            name="confirm"
+                            type="password"
+                        /><br></br>
+                    </div>
+
                     <button type="submit">Submit</button>
-                    <p>Already have an account? <Link href = '/Login'>Login here.</Link></p>
+                    <p className={styles.formText}>Already have an account? <a className = {styles.loginLink}><Link href = '/Login'>Login here.</Link></a></p>
                 </form>
             </div>
         </div>
