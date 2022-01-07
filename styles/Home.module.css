@@ -297,3 +297,16 @@
 .form {
   padding-top: .5rem;
 }
+
+/* SignUp */
+
+.formPage {
+  padding: 20% 0;
+}
+
+.formContainer {
+  text-align: center;
+  border: 0.1rem solid #B5B0AF;
+  width: 45%;
+  margin: auto;
+}
