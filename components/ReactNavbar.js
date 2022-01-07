@@ -46,7 +46,7 @@ export default function ReactNavbar() {
 
           </ul>
         </nav>
-        <a className="cta" href="#"><button className={styles.button}>Profile</button></a>
+        <Link href='/SignUp'><button className={styles.button}>Login or Sign Up</button></Link>
       </header>
     </div>
   );
