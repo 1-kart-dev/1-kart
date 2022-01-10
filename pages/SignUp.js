@@ -12,9 +12,10 @@ export default function SignUp() {
     const [conf, setConf] = useState('');
 
     const submitUser = async() => {
+        var id = Date.now();
         const response = await fetch('/api/create', {
             method: 'POST',
-            body: JSON.stringify({username, name, email, password}),
+            body: JSON.stringify({username, name, email, password, id}),
             headers: {
                 'Content-Type': 'application/json'
             }
