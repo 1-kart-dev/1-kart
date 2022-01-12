@@ -29,6 +29,7 @@
   background: linear-gradient(rgb(244, 250, 255), rgb(255, 255, 255));
   min-width: 100%;
   box-shadow: 0px 0px 10px 0 rgba(209, 209, 209, 0.8);
+  overflow-x: hidden;
 }
 
 .logo {
@@ -39,6 +40,7 @@
 
 .nav_links {
   list-style: none;
+  white-space: nowrap;
 }
 
 .nav_links li {
@@ -71,7 +73,8 @@
   border-radius: 50px;
   cursor: pointer;
   border:rgb(0, 0, 0);
-  
+  display: inline-flex;
+  white-space: nowrap;
 }
 
 .button:hover {
