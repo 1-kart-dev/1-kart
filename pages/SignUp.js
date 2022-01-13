@@ -13,11 +13,12 @@ export default function SignUp() {
 
     const submitUser = async() => {
         if (password !== conf) {
+            window.alert("Passwords do not match.");
             return;
         }
         var len = password.length;
         if (len < 8) {
-            alert("Password must be at least 8 characters long.");
+            window.alert("Password must be at least 8 characters long.");
             return;
         }
         var noCap = true;
