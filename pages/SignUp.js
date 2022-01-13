@@ -12,6 +12,60 @@ export default function SignUp() {
     const [conf, setConf] = useState('');
 
     const submitUser = async() => {
+        if (password !== conf) {
+            return;
+        }
+        var len = password.length;
+        if (len < 8) {
+            alert("Password must be at least 8 characters long.");
+            return;
+        }
+        var noCap = true;
+        var noUnd = true;
+        var noSpec = true;
+        for (var i = 0; i < len; i++) {
+            var charCode = password.charCodeAt(i);
+            if (charCode >= 'A'.charCodeAt(0) && charCode <= 'Z'.charCodeAt(0)) {
+                noCap = false;
+            } else if (charCode >= 'a'.charCodeAt(0) && charCode <= 'z'.charCodeAt(0)) {
+                noUnd = false;
+            } else if (charCode >= '!'.charCodeAt(0) && charCode <= '/'.charCodeAt(0)) {
+                noSpec = false;
+            } else if (charCode >= ':'.charCodeAt(0) && charCode <= '@'.charCodeAt(0)) {
+                noSpec = false;
+            } else if (charCode >= '['.charCodeAt(0) && charCode <= '`'.charCodeAt(0)) {
+                noSpec = false;
+            }
+        }
+        if (noCap) {
+            if (noUnd) {
+                if (noSpec) {
+                    window.alert("Password must contain an uppercase letter, a lowercase letter, and a special character.");
+                    return;
+                }
+                window.alert("Password must contain an uppercase letter and a lowercase letter.");
+                return;
+            }
+            if (noSpec) {
+                window.alert("Password must contain an uppercase letter and a special character.");
+                return;
+            }
+            window.alert("Password must contain an uppercase letter.");
+            return;
+        }
+        if (noUnd) {
+            if (noSpec) {
+                window.alert("Password must contain a lowercase letter and a special character.");
+                return;
+            }
+            window.alert("Password must contain a lowercase letter.");
+            return;
+        }
+        if (noSpec) {
+            window.alert("Password must contain a special character.");
+            return;
+        }
+
         var id = Date.now();
         const response = await fetch('/api/create', {
             method: 'POST',
