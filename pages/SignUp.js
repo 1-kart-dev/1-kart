@@ -12,6 +12,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import styles from '../styles/Login.module.scss';
+import Router from 'next/router'
 
 function Copyright(props) {
   return (
@@ -28,15 +29,81 @@ function Copyright(props) {
 
 
 export default function SignUp() {
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
-  };
+    var first = JSON.stringify(data.get('firstName'));
+    var last = JSON.stringify(data.get('lastName'));
+    var password = JSON.stringify(data.get('password'));
+    var email = JSON.stringify(data.get('email'));
+  var len = password.length;
+  if (len < 8) {
+      window.alert("Password must be at least 8 characters long.");
+      return;
+  }
+  var noCap = true;
+  var noUnd = true;
+  var noSpec = true;
+  for (var i = 0; i < len; i++) {
+      var charCode = password.charCodeAt(i);
+      if (charCode >= 'A'.charCodeAt(0) && charCode <= 'Z'.charCodeAt(0)) {
+          noCap = false;
+      } else if (charCode >= 'a'.charCodeAt(0) && charCode <= 'z'.charCodeAt(0)) {
+          noUnd = false;
+      } else if (charCode >= '!'.charCodeAt(0) && charCode <= '/'.charCodeAt(0)) {
+          noSpec = false;
+      } else if (charCode >= ':'.charCodeAt(0) && charCode <= '@'.charCodeAt(0)) {
+          noSpec = false;
+      } else if (charCode >= '['.charCodeAt(0) && charCode <= '`'.charCodeAt(0)) {
+          noSpec = false;
+      }
+  }
+  if (noCap) {
+      if (noUnd) {
+          if (noSpec) {
+              window.alert("Password must contain an uppercase letter, a lowercase letter, and a special character.");
+              return;
+          }
+          window.alert("Password must contain an uppercase letter and a lowercase letter.");
+          return;
+      }
+      if (noSpec) {
+          window.alert("Password must contain an uppercase letter and a special character.");
+          return;
+      }
+      window.alert("Password must contain an uppercase letter.");
+      return;
+  }
+  if (noUnd) {
+      if (noSpec) {
+          window.alert("Password must contain a lowercase letter and a special character.");
+          return;
+      }
+      window.alert("Password must contain a lowercase letter.");
+      return;
+  }
+  if (noSpec) {
+      window.alert("Password must contain a special character.");
+      return;
+  }
+
+  var id = Date.now();
+  const response = await fetch('/api/create', {
+      method: 'POST',
+      body: JSON.stringify({first, last, email, password, id}),
+      headers: {
+          'Content-Type': 'application/json'
+      }
+  })
+  const res = await response.json();
+  if (res.message === "Fail") {
+      window.alert("User already exists");
+  } else {
+      Router.push('/Kart');
+      console.log("hey");
+  }
+}
 
   return (
     <div className={styles.background}>
