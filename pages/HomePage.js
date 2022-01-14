@@ -9,79 +9,79 @@ export default function HomePage() {
     return(
         <div>
             {/* <ReactNavbar /> */}
-                <header classNameName="ud-header">
-                <div classNameName="container">
-                    <div classNameName="row">
-                    <div classNameName="col-lg-12">
-                        <nav classNameName="navbar navbar-expand-lg">
-                        <button classNameName="navbar-toggler">
-                            <span classNameName="toggler-icon"> </span>
-                            <span classNameName="toggler-icon"> </span>
-                            <span classNameName="toggler-icon"> </span>
+                <header className="ud-header">
+                <div className="container">
+                    <div className="row">
+                    <div className="col-lg-12">
+                        <nav className="navbar navbar-expand-lg">
+                        <button className="navbar-toggler">
+                            <span className="toggler-icon"> </span>
+                            <span className="toggler-icon"> </span>
+                            <span className="toggler-icon"> </span>
                         </button>
-                        <div classNameName="navbar-collapse">
-                            <ul id="nav" classNameName="navbar-nav mx-auto">
-                            <li classNameName="nav-item">
-                                <a classNameName="ud-menu-scroll" href="#home">Home</a>
+                        <div className="navbar-collapse">
+                            <ul id="nav" className="navbar-nav mx-auto">
+                            <li className="nav-item">
+                                <a className="ud-menu-scroll" href="#home">Home</a>
                             </li>
 
-                            <li classNameName="nav-item">
-                                <a classNameName="ud-menu-scroll" href="#about">About</a>
+                            <li className="nav-item">
+                                <a className="ud-menu-scroll" href="#about">About</a>
                             </li>
-                            <li classNameName="nav-item">
-                                <a classNameName="ud-menu-scroll" href="#team">Team</a>
+                            <li className="nav-item">
+                                <a className="ud-menu-scroll" href="#team">Team</a>
                             </li>
-                            <li classNameName="nav-item">
-                                <a classNameName="ud-menu-scroll" href="#contact">Contact</a>
+                            <li className="nav-item">
+                                <a className="ud-menu-scroll" href="#contact">Contact</a>
                             </li>
-                            <li classNameName="nav-item nav-item-has-children">
+                            <li className="nav-item nav-item-has-children">
                                 <a href="javascript:void(0)"> Pages </a>
-                                <ul classNameName="ud-submenu">
-                                <li classNameName="ud-submenu-item">
-                                    <a href="about.html" classNameName="ud-submenu-link">
+                                <ul className="ud-submenu">
+                                <li className="ud-submenu-item">
+                                    <a href="about.html" className="ud-submenu-link">
                                     About Page
                                     </a>
                                 </li>
-                                <li classNameName="ud-submenu-item">
-                                    <a href="pricing.html" classNameName="ud-submenu-link">
+                                <li className="ud-submenu-item">
+                                    <a href="pricing.html" className="ud-submenu-link">
                                     Pricing Page
                                     </a>
                                 </li>
-                                <li classNameName="ud-submenu-item">
-                                    <a href="contact.html" classNameName="ud-submenu-link">
+                                <li className="ud-submenu-item">
+                                    <a href="contact.html" className="ud-submenu-link">
                                     Contact Page
                                     </a>
                                 </li>
-                                <li classNameName="ud-submenu-item">
-                                    <a href="blog.html" classNameName="ud-submenu-link">
+                                <li className="ud-submenu-item">
+                                    <a href="blog.html" className="ud-submenu-link">
                                     Blog Grid Page
                                     </a>
                                 </li>
-                                <li classNameName="ud-submenu-item">
-                                    <a href="blog-details.html" classNameName="ud-submenu-link">
+                                <li className="ud-submenu-item">
+                                    <a href="blog-details.html" className="ud-submenu-link">
                                     Blog Details Page
                                     </a>
                                 </li>
-                                <li classNameName="ud-submenu-item">
-                                    <a href="login.html" classNameName="ud-submenu-link">
+                                <li className="ud-submenu-item">
+                                    <a href="login.html" className="ud-submenu-link">
                                     Sign In Page
                                     </a>
                                 </li>
-                                <li classNameName="ud-submenu-item">
-                                    <a href="404.html" classNameName="ud-submenu-link">404 Page</a>
+                                <li className="ud-submenu-item">
+                                    <a href="404.html" className="ud-submenu-link">404 Page</a>
                                 </li>
                                 </ul>
                             </li>
                             </ul>
                         </div>
 
-                        <div classNameName="navbar-btn d-none d-sm-inline-block">
-                            <a classNameName="ud-main-btn ud-login-btn">
+                        <div className="navbar-btn d-none d-sm-inline-block">
+                            <a className="ud-main-btn ud-login-btn">
                                 <Link href="/Login">
                                     Log In
                                 </Link>
                             </a>
-                            <a classNameName="ud-main-btn ud-white-btn">
+                            <a className="ud-main-btn ud-white-btn">
                                 <Link href="/SignUp">
                                     Sign Up
                                 </Link>
@@ -92,35 +92,35 @@ export default function HomePage() {
                     </div>
                 </div>
                 </header>
-                <section classNameName="ud-hero" id="home">
-                <div classNameName="container">
-                    <div classNameName="row">
-                    <div classNameName="col-lg-12">
-                        <div classNameName="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
-                        <h1 classNameName="ud-hero-title">
+                <section className="ud-hero" id="home">
+                <div className="container">
+                    <div className="row">
+                    <div className="col-lg-12">
+                        <div className="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
+                        <h1 className="ud-hero-title">
                             The New Way to Shop
                         </h1>
-                        <p classNameName="ud-hero-desc">
+                        <p className="ud-hero-desc">
                         Organize all of the products that grab your attention, without the hassle. 
                         1kart gives you the tools to purchase, manage, and organize all e-commerce to best fit your purchase agenda.
                         </p>
                         </div>
                         <div
-                        classNameName="ud-hero-brands-wrapper wow fadeInUp"
+                        className="ud-hero-brands-wrapper wow fadeInUp"
                         data-wow-delay=".3s"
                         >
                         </div>
-                        <div classNameName="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
+                        <div className="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
                         </div>
                     </div>
                     </div>
                 </div>
                 </section>
-                <section id="features" classNameName="ud-features">
-                <div classNameName="container">
-                    <div classNameName="row">
-                    <div classNameName="col-lg-12">
-                        <div classNameName="ud-section-title">
+                <section id="features" className="ud-features">
+                <div className="container">
+                    <div className="row">
+                    <div className="col-lg-12">
+                        <div className="ud-section-title">
                         <span>Features</span>
                         <h2>Your Tool Kit</h2>
                         <p>
@@ -130,67 +130,67 @@ export default function HomePage() {
                         </div>
                     </div>
                     </div>
-                    <div classNameName="row">
-                    <div classNameName="col-xl-3 col-lg-3 col-sm-6">
-                        <div classNameName="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
-                        <div classNameName="ud-feature-icon">
-                            <i classNameName="lni lni-gift"></i>
+                    <div className="row">
+                    <div className="col-xl-3 col-lg-3 col-sm-6">
+                        <div className="ud-single-feature wow fadeInUp" data-wow-delay=".1s">
+                        <div className="ud-feature-icon">
+                            <i className="lni lni-gift"></i>
                         </div>
-                        <div classNameName="ud-feature-content">
-                            <h3 classNameName="ud-feature-title">Active Cart</h3>
-                            <p classNameName="ud-feature-desc">
+                        <div className="ud-feature-content">
+                            <h3 className="ud-feature-title">Active Cart</h3>
+                            <p className="ud-feature-desc">
                             Organize your potential items and make a purchase
                             </p>
-                            <a href="javascript:void(0)" classNameName="ud-feature-link">
+                            <a href="javascript:void(0)" className="ud-feature-link">
                             Learn More
                             </a>
                         </div>
                         </div>
                     </div>
-                    <div classNameName="col-xl-3 col-lg-3 col-sm-6">
-                        <div classNameName="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
-                        <div classNameName="ud-feature-icon">
-                            <i classNameName="lni lni-move"></i>
+                    <div className="col-xl-3 col-lg-3 col-sm-6">
+                        <div className="ud-single-feature wow fadeInUp" data-wow-delay=".15s">
+                        <div className="ud-feature-icon">
+                            <i className="lni lni-move"></i>
                         </div>
-                        <div classNameName="ud-feature-content">
-                            <h3 classNameName="ud-feature-title">Wish Lists</h3>
-                            <p classNameName="ud-feature-desc">
+                        <div className="ud-feature-content">
+                            <h3 className="ud-feature-title">Wish Lists</h3>
+                            <p className="ud-feature-desc">
                             Leave items to revisit for later purchase decisions
                             </p>
-                            <a href="javascript:void(0)" classNameName="ud-feature-link">
+                            <a href="javascript:void(0)" className="ud-feature-link">
                             Learn More
                             </a>
                         </div>
                         </div>
                     </div>
-                    <div classNameName="col-xl-3 col-lg-3 col-sm-6">
-                        <div classNameName="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
-                        <div classNameName="ud-feature-icon">
-                            <i classNameName="lni lni-layout"></i>
+                    <div className="col-xl-3 col-lg-3 col-sm-6">
+                        <div className="ud-single-feature wow fadeInUp" data-wow-delay=".2s">
+                        <div className="ud-feature-icon">
+                            <i className="lni lni-layout"></i>
                         </div>
-                        <div classNameName="ud-feature-content">
-                            <h3 classNameName="ud-feature-title">Subcarts</h3>
-                            <p classNameName="ud-feature-desc">
+                        <div className="ud-feature-content">
+                            <h3 className="ud-feature-title">Subcarts</h3>
+                            <p className="ud-feature-desc">
                             Store and organize items for future/ reorder purchases
                             </p>
-                            <a href="javascript:void(0)" classNameName="ud-feature-link">
+                            <a href="javascript:void(0)" className="ud-feature-link">
                             Learn More
                             </a>
                         </div>
                         </div>
                     </div>
-                    <div classNameName="col-xl-3 col-lg-3 col-sm-6">
-                        <div classNameName="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
-                        <div classNameName="ud-feature-icon">
-                            <i classNameName="lni lni-layers"></i>
+                    <div className="col-xl-3 col-lg-3 col-sm-6">
+                        <div className="ud-single-feature wow fadeInUp" data-wow-delay=".25s">
+                        <div className="ud-feature-icon">
+                            <i className="lni lni-layers"></i>
                         </div>
-                        <div classNameName="ud-feature-content">
-                            <h3 classNameName="ud-feature-title">My Brands</h3>
-                            <p classNameName="ud-feature-desc">
+                        <div className="ud-feature-content">
+                            <h3 className="ud-feature-title">My Brands</h3>
+                            <p className="ud-feature-desc">
                             Users can see the brands they have shopped and analytics
                             on their e-commerce purchase history
                             </p>
-                            <a href="javascript:void(0)" classNameName="ud-feature-link">
+                            <a href="javascript:void(0)" className="ud-feature-link">
                             Learn More
                             </a>
                         </div>
@@ -199,12 +199,12 @@ export default function HomePage() {
                     </div>
                 </div>
                 </section>
-                <section id="about" classNameName="ud-about">
-                <div classNameName="container">
-                    <div classNameName="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
-                    <div classNameName="ud-about-content-wrapper">
-                        <div classNameName="ud-about-content">
-                        <span classNameName="tag">About Us</span>
+                <section id="about" className="ud-about">
+                <div className="container">
+                    <div className="ud-about-wrapper wow fadeInUp" data-wow-delay=".2s">
+                    <div className="ud-about-content-wrapper">
+                        <div className="ud-about-content">
+                        <span className="tag">About Us</span>
                         <h2>Shopping is a Luxury, and Should Never be a Task.</h2>
                         <p>
                         Brands have left customers with the burden of sifting through the 
@@ -219,19 +219,19 @@ export default function HomePage() {
                         products that best represent their lifestyle and make a purchase 
                         decision when they're ready.
                         </p> */}
-                        <a href="javascript:void(0)" classNameName="ud-main-btn">Learn More</a>
+                        <a href="javascript:void(0)" className="ud-main-btn">Learn More</a>
                         </div>
                     </div>
-                    <div classNameName="ud-about-image">
+                    <div className="ud-about-image">
                     </div>
                     </div>
                 </div>
                 </section>
-                {/* <section id="pricing" classNameName="ud-pricing">
-                <div classNameName="container">
-                    <div classNameName="row">
-                    <div classNameName="col-lg-12">
-                        <div classNameName="ud-section-title mx-auto text-center">
+                {/* <section id="pricing" className="ud-pricing">
+                <div className="container">
+                    <div className="row">
+                    <div className="col-lg-12">
+                        <div className="ud-section-title mx-auto text-center">
                         <span>Pricing</span>
                         <h2>Our Pricing Plans</h2>
                         <p>
@@ -242,17 +242,17 @@ export default function HomePage() {
                     </div>
                     </div>
 
-                    <div classNameName="row g-0 align-items-center justify-content-center">
-                    <div classNameName="col-lg-4 col-md-6 col-sm-10">
+                    <div className="row g-0 align-items-center justify-content-center">
+                    <div className="col-lg-4 col-md-6 col-sm-10">
                         <div
-                        classNameName="ud-single-pricing first-item wow fadeInUp"
+                        className="ud-single-pricing first-item wow fadeInUp"
                         data-wow-delay=".15s"
                         >
-                        <div classNameName="ud-pricing-header">
+                        <div className="ud-pricing-header">
                             <h3>STARTING FROM</h3>
                             <h4>$ 19.99/mo</h4>
                         </div>
-                        <div classNameName="ud-pricing-body">
+                        <div className="ud-pricing-body">
                             <ul>
                             <li>5 User</li>
                             <li>All UI components</li>
@@ -262,24 +262,24 @@ export default function HomePage() {
                             <li>4 Months support</li>
                             </ul>
                         </div>
-                        <div classNameName="ud-pricing-footer">
-                            <a href="javascript:void(0)" classNameName="ud-main-btn ud-border-btn">
+                        <div className="ud-pricing-footer">
+                            <a href="javascript:void(0)" className="ud-main-btn ud-border-btn">
                             Purchase Now
                             </a>
                         </div>
                         </div>
                     </div>
-                    <div classNameName="col-lg-4 col-md-6 col-sm-10">
+                    <div className="col-lg-4 col-md-6 col-sm-10">
                         <div
-                        classNameName="ud-single-pricing active wow fadeInUp"
+                        className="ud-single-pricing active wow fadeInUp"
                         data-wow-delay=".1s"
                         >
-                        <span classNameName="ud-popular-tag">POPULAR</span>
-                        <div classNameName="ud-pricing-header">
+                        <span className="ud-popular-tag">POPULAR</span>
+                        <div className="ud-pricing-header">
                             <h3>STARTING FROM</h3>
                             <h4>$ 30.99/mo</h4>
                         </div>
-                        <div classNameName="ud-pricing-body">
+                        <div className="ud-pricing-body">
                             <ul>
                             <li>5 User</li>
                             <li>All UI components</li>
@@ -289,23 +289,23 @@ export default function HomePage() {
                             <li>4 Months support</li>
                             </ul>
                         </div>
-                        <div classNameName="ud-pricing-footer">
-                            <a href="javascript:void(0)" classNameName="ud-main-btn ud-white-btn">
+                        <div className="ud-pricing-footer">
+                            <a href="javascript:void(0)" className="ud-main-btn ud-white-btn">
                             Purchase Now
                             </a>
                         </div>
                         </div>
                     </div>
-                    <div classNameName="col-lg-4 col-md-6 col-sm-10">
+                    <div className="col-lg-4 col-md-6 col-sm-10">
                         <div
-                        classNameName="ud-single-pricing last-item wow fadeInUp"
+                        className="ud-single-pricing last-item wow fadeInUp"
                         data-wow-delay=".15s"
                         >
-                        <div classNameName="ud-pricing-header">
+                        <div className="ud-pricing-header">
                             <h3>STARTING FROM</h3>
                             <h4>$ 70.99/mo</h4>
                         </div>
-                        <div classNameName="ud-pricing-body">
+                        <div className="ud-pricing-body">
                             <ul>
                             <li>5 User</li>
                             <li>All UI components</li>
@@ -315,8 +315,8 @@ export default function HomePage() {
                             <li>4 Months support</li>
                             </ul>
                         </div>
-                        <div classNameName="ud-pricing-footer">
-                            <a href="javascript:void(0)" classNameName="ud-main-btn ud-border-btn">
+                        <div className="ud-pricing-footer">
+                            <a href="javascript:void(0)" className="ud-main-btn ud-border-btn">
                             Purchase Now
                             </a>
                         </div>
@@ -325,14 +325,14 @@ export default function HomePage() {
                     </div>
                 </div>
                 </section> */}
-                {/* <section id="faq" classNameName="ud-faq">
-                <div classNameName="shape">
+                {/* <section id="faq" className="ud-faq">
+                <div className="shape">
                     <img src="assets/images/faq/shape.svg" alt="shape" />
                 </div>
-                <div classNameName="container">
-                    <div classNameName="row">
-                    <div classNameName="col-lg-12">
-                        <div classNameName="ud-section-title text-center mx-auto">
+                <div className="container">
+                    <div className="row">
+                    <div className="col-lg-12">
+                        <div className="ud-section-title text-center mx-auto">
                         <span>FAQ</span>
                         <h2>Any Questions? Answered</h2>
                         <p>
@@ -343,9 +343,9 @@ export default function HomePage() {
                     </div>
                     </div>
 
-                    <div classNameName="row">
-                    <div classNameName="col-lg-6">
-                        <div classNameName="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
+                    <div className="row">
+                    <div className="col-lg-6">
+                        <div className="ud-single-faq wow fadeInUp" data-wow-delay=".1s">
                         <div className="accordion">
                             <button
                             className="ud-faq-btn collapsed"
@@ -1141,14 +1141,14 @@ export default function HomePage() {
                 <a href="javascript:void(0)" className="back-to-top">
                 <i className="lni lni-chevron-up"> </i>
                 </a>
-            <footer classNameName={styles.footer}>
+            <footer className={styles.footer}>
                 <a
                 href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
                 target="_blank"
                 rel="noopener noreferrer"
                 >
                 Powered by{' '}
-                <span classNameName={styles.logo}>
+                <span className={styles.logo}>
                     <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
                 </span>
                 </a>
