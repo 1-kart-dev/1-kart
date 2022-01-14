@@ -214,8 +214,8 @@ export default function HomePage() {
                         <p>
                         Customers can now enjoy their mindless online shopping with a home 
                         base to organize all their findings, 
-                        so they can revisit and make a purchase once they’re ready. 
-                        1-kart wants to offer every shopper the power to find \& organize the 
+                        so they can revisit and make a purchase once they&apos;re ready. 
+                        1-kart wants to offer every shopper the power to find & organize the 
                         products that best represent their lifestyle and make a purchase 
                         decision when they're ready.
                         </p>
