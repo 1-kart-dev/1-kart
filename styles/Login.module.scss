@@ -1,0 +1,8 @@
+$primary-color: #c9e4f5;
+
+.background {
+    padding: 10rem 0;
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgb(255, 255, 255) 0%, $primary-color 100%);
+    max-height: 100vh;
+  }
