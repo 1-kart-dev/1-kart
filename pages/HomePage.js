@@ -215,7 +215,7 @@ export default function HomePage() {
                         Customers can now enjoy their mindless online shopping with a home 
                         base to organize all their findings, 
                         so they can revisit and make a purchase once they’re ready. 
-                        1-kart wants to offer every shopper the power to find & organize the 
+                        1-kart wants to offer every shopper the power to find \& organize the 
                         products that best represent their lifestyle and make a purchase 
                         decision when they're ready.
                         </p>
@@ -864,7 +864,7 @@ export default function HomePage() {
                         <h3 className="ud-contact-form-title">Send us a Message</h3>
                         <form className="ud-contact-form">
                             <div className="ud-form-group">
-                            <label for="fullName">Full Name*</label>
+                            <label htmlFor="fullName">Full Name*</label>
                             <input
                                 type="text"
                                 name="fullName"
@@ -872,7 +872,7 @@ export default function HomePage() {
                             />
                             </div>
                             <div className="ud-form-group">
-                            <label for="email">Email*</label>
+                            <label htmlFor="email">Email*</label>
                             <input
                                 type="email"
                                 name="email"
@@ -880,7 +880,7 @@ export default function HomePage() {
                             />
                             </div>
                             <div className="ud-form-group">
-                            <label for="phone">Phone*</label>
+                            <label htmlFor="phone">Phone*</label>
                             <input
                                 type="text"
                                 name="phone"
@@ -888,7 +888,7 @@ export default function HomePage() {
                             />
                             </div>
                             <div className="ud-form-group">
-                            <label for="message">Message*</label>
+                            <label htmlFor="message">Message*</label>
                             <textarea
                                 name="message"
                                 rows="1"
