@@ -304,12 +304,35 @@
 /* SignUp */
 
 .formPage {
-  padding: 20% 0;
+  padding: 10rem 0;
+  background: rgb(63,94,251);
+  background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(155,70,252,1) 100%);
 }
 
 .formContainer {
   text-align: center;
-  border: 0.1rem solid #B5B0AF;
+  border-radius: 1rem;
+  border: 0.1rem outset #B5B0AF;
   width: 45%;
   margin: auto;
+  background-color: whitesmoke;
+}
+
+.loginLink {
+  text-decoration: underline;
+  text-decoration-color: blue;
+}
+
+.formText {
+  color: grey;
+}
+
+.loginLink {
+  color: blue;
+}
+
+.input1, .input2, .input3, .input4 {
+  width: 65%;
+  border-radius: .5rem;
+  border: 0.1rem solid #B5B0AF;
 }
