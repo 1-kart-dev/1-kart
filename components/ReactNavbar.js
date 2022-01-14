@@ -12,19 +12,6 @@ export default function ReactNavbar() {
     return () => window.removeEventListener("resize", updateWidthAndHeight);
   });
 
-  /**if (width < 1150) {
-    return (
-      <MobileNav
-        width={width}
-        logoUrl={logoUrl}
-        background={background}
-        navLinks={navLinks}
-        socialIcon={socialIcon}
-        sticky={sticky}
-      />
-    );
-  }**/
-
   const Error = () => <h1>Please pass the component in the menu prop</h1>;
 
   return (
@@ -43,7 +30,6 @@ export default function ReactNavbar() {
             <li className={styles.li}><a className={styles.a} href="#">Shipping</a></li>
             <li className={styles.li}><a className={styles.a} href="#">History</a></li>
             <li className={styles.li}><a className={styles.a} href="#">Wishlist</a></li>
-
           </ul>
         </nav>
         <Link href='/SignUp'><button className={styles.button}>Login or Sign Up</button></Link>
