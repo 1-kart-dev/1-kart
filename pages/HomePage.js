@@ -211,14 +211,14 @@ export default function HomePage() {
                         endless ad stream to find the products & brands that most 
                         represent each individual.
                         </p>
-                        <p>
+                        {/* <p>
                         Customers can now enjoy their mindless online shopping with a home 
                         base to organize all their findings, 
                         so they can revisit and make a purchase once they&apos;re ready. 
                         1-kart wants to offer every shopper the power to find & organize the 
                         products that best represent their lifestyle and make a purchase 
                         decision when they're ready.
-                        </p>
+                        </p> */}
                         <a href="javascript:void(0)" classNameName="ud-main-btn">Learn More</a>
                         </div>
                     </div>
