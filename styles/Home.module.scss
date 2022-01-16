@@ -277,6 +277,14 @@
   text-align: center;
 }
 
+.skh2, .skh3 {
+  font-family: "Montserrat", san-serif;
+}
+
+.skh2 + .skh3 {
+  margin-top: -.7rem;
+}
+
 .kartContainer {
   border-radius: 2rem;
   border: 0.1rem solid #B5B0AF;

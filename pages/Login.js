@@ -1,8 +1,11 @@
-import React from 'react';
-import { useFormik } from 'formik';
+import React, {useState} from 'react';
 import styles from '../styles/Home.module.scss'
+import {signIn} from './index'
 
 export default function Login() {
+    const [email, setEmail] = useState(null);
+    const [password, setPassword] = useState('');
+
     return(
         <div className={styles.main}>
             <div className = {styles.formPage}>
@@ -13,8 +16,8 @@ export default function Login() {
                             <label for="email">Email Address:</label><br></br>
                             <input className={styles.input2}
                                 id="email"
-                                name="email"
                                 type="email"
+                                onInput={e => setEmail(e.target.value)}
                             /><br></br>
                         </div>
 
@@ -22,12 +25,12 @@ export default function Login() {
                             <label for="password">Enter Password:</label><br></br>
                             <input className={styles.input3}
                                 id="password"
-                                name="password"
                                 type="password"
+                                onInput={e => setPassword(e.target.value)}
                             /><br></br>
                         </div>
 
-                        <button type="submit" className = {styles.formLogin}>Login</button>
+                        <button type="submit" className = {styles.formLogin} onClick={signIn(email, password)}>Login</button>
                     </form>
                 </div>
             </div>

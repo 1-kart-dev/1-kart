@@ -1,8 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from '../styles/Home.module.scss'
 import Link from 'next/link'
+import { createUser } from './index'
 
 export default function SignUp() {
+
+    const [email, setEmail] = useState(null);
+    const [password, setPassword] = useState('');
+
     return(
         <div className={styles.main}>
             <div className = {styles.formPage}>
@@ -32,8 +37,9 @@ export default function SignUp() {
                             <label for="email">Email Address:</label><br></br>
                             <input className={styles.input2}
                                 id="email"
-                                name="email"
                                 type="email"
+                                value={email}
+                                onInput={e => setEmail(e.target.value)}
                             /><br></br>
                         </div>
 
@@ -50,12 +56,13 @@ export default function SignUp() {
                             <label for="confirm">Confirm Password:</label><br></br>
                             <input className={styles.input4}
                                 id="confirm"
-                                name="confirm"
+                                value={password}
                                 type="password"
+                                onInput={e => setPassword(e.target.value)}
                             /><br></br>
                         </div>
 
-                        <button type="submit" className = {styles.formSubmit}>Submit</button>
+                        <button type="submit" className={styles.formSubmit} onClick={createUser(email, password)}>Submit</button>
                         <p className={styles.formText}>Already have an account? <a className = {styles.loginLink}><Link href = '/Login'>Login here.</Link></a></p>
                     </form>
                 </div>
