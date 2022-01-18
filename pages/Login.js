@@ -12,6 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import styles from '../styles/Login.module.scss';
+import {useState} from 'react'
+import {signIn} from './index'
 
 function Copyright(props) {
   return (
@@ -28,6 +30,9 @@ function Copyright(props) {
 
 
 export default function SignIn() {
+  const [email, setEmail] = useState(null);
+  const [password, setPassword] = useState('');
+
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -66,6 +71,8 @@ export default function SignIn() {
               name="email"
               autoComplete="email"
               autoFocus
+              value={email}
+              onInput={e => setEmail(e.target.value)}
             />
             <TextField
               margin="normal"
@@ -76,6 +83,8 @@ export default function SignIn() {
               type="password"
               id="password"
               autoComplete="current-password"
+              value={password}
+              onInput={e => setPassword(e.target.value)}
             />
             <FormControlLabel
               control={<Checkbox value="remember" color="primary" />}
@@ -85,6 +94,7 @@ export default function SignIn() {
               type="submit"
               fullWidth
               variant="contained"
+              onClick={signIn(email, password)}
               sx={{ mt: 3, mb: 2 }}
             >
               Sign In
