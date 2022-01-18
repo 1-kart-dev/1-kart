@@ -77,6 +77,11 @@ export default function HomePage() {
 
                         <div class="navbar-btn d-none d-sm-inline-block">
                             <a class="ud-main-btn ud-white-btn">
+                                <Link href="/Login">
+                                    Log In
+                                </Link>
+                            </a>
+                            <a class="ud-main-btn ud-white-btn">
                                 <Link href="/SignUp">
                                     Sign Up
                                 </Link>
