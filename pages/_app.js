@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.scss'
 import '../assets/css/bootstrap.min.css'
 import "../assets/css/animate.css"
 import "../assets/css/lineicons.css"
