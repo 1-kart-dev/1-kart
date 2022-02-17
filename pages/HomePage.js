@@ -714,8 +714,8 @@ export default function HomePage() {
                             />
                         </div> */}
                         <div class="ud-team-info">
-                            <h5>Joey Fieno</h5>
-                            <h6>Co-Founder</h6>
+                            <h5>Ushno Chakraborty</h5>
+                            <h6>Head of Technology</h6>
                         </div>
                         <ul class="ud-team-socials">
                             <li>
@@ -755,7 +755,7 @@ export default function HomePage() {
                             />
                         </div> */}
                         <div class="ud-team-info">
-                            <h5>Ushno Chakraborty</h5>
+                            <h5>Sam Lempp</h5>
                             <h6>Lead Developer</h6>
                         </div>
                         <ul class="ud-team-socials">
@@ -797,7 +797,7 @@ export default function HomePage() {
                         </div> */}
                         <div class="ud-team-info">
                             <h5>Will Swinyer</h5>
-                            <h6>Software Developer</h6>
+                            <h6>Lead Developer</h6>
                         </div>
                         <ul class="ud-team-socials">
                             <li>
@@ -925,8 +925,7 @@ export default function HomePage() {
                             {/* <img src="assets/images/logo/logo.svg" alt="logo" /> */}
                             </a>
                             <p class="ud-widget-desc">
-                            We create digital experiences for brands and companies by
-                            using technology.
+                            We enhance the digital e-commerce experience for both customers and merchants.
                             </p>
                             <ul class="ud-widget-socials">
                             <li>
