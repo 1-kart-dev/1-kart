@@ -1,0 +1,40 @@
+@use 'variables';
+
+.box {
+    padding: 1rem;
+    background: linear-gradient(180deg, rgba(201,228,245,0.75) 0%, rgba(255,255,255,1) 50%, rgba(201,228,245,0.75) 100%);
+    background-color: rgb(231, 230, 230);
+    margin-left: auto;
+    margin-right: auto;
+    grid-auto-columns: minmax(250px, 1000px);
+    grid-auto-rows: minmax(250px, auto);
+    border-top: 2px;
+    border-bottom: 2px;
+}
+
+.images {
+    text-align: center;
+}
+
+.text {
+    text-align: left;
+}
+
+.itemName {
+    font-size: large;
+    text-align: left;
+}
+
+.itemPrice {
+    font-size: medium;
+    text-align: left;
+}
+
+.itemDesc {
+    font-size: small;
+    text-align: left;
+}
+
+.p {
+    font-size: xx-small;
+}
