@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/Home.module.scss'
 import ReactNavbar from '../components/ReactNavbar'
 import Button from '@mui/material/Button';
@@ -6,8 +6,14 @@ import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import SearchSks from './SearchSKs'
+import CreateSubkartModal from '../components/CreateSubkartModal';
 
 export default function SubKarts() {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+    
     return(
         <div>
             <ReactNavbar />
@@ -16,9 +22,11 @@ export default function SubKarts() {
                 <h3>Click the Button below to get started</h3>
                 <Button 
                 variant="contained" 
-                startIcon={<AddIcon />}>
+                startIcon={<AddIcon />}
+                onClick={handleShow}>
                     Create SubKart
                 </Button>
+                <CreateSubkartModal show={show} onHide={handleClose}/>
                 <SearchSks />
                 <div className = {styles.kartContainer}>
                     <h2>Shoes</h2>
