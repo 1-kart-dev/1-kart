@@ -7,6 +7,7 @@ import { auth, firestore } from './index';
 import { updateDoc, doc, collection, query, where, onSnapshot } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 import {useState, useEffect} from 'react';
+import ActMenu from './ActMenu';
 
 export default function Account() {
     const[email, setEmail] = useState('');
@@ -41,7 +42,7 @@ export default function Account() {
                 });
             });
         });
-    }, []);
+    });
 
     function onClick() {
         updateDoc(doc(firestore, "Users", uid), {
@@ -55,23 +56,7 @@ export default function Account() {
 
     return (
         <div className = {styles.container}>
-            <div className = {styles.menu1}>
-                <div className = {styles.tabs}>
-                    <Button>Profile</Button>
-                </div>
-                <div className = {styles.tabs}>
-                    <Button>History</Button>
-                </div>
-                <div className = {styles.tabs}>
-                    <Button>Privacy</Button>
-                </div>
-                <div className = {styles.tabs}>
-                    <Button>Security</Button>
-                </div>
-                <div className = {styles.tabs}>
-                    <Button>About</Button>
-                </div>
-            </div>
+            <ActMenu />
             <div className = {styles.profile}>
                 <div className = {styles.grid1}>
                     <h2>Edit Profile</h2>
@@ -137,7 +122,10 @@ export default function Account() {
                     </FormControl>
                 </div>
                 <div className = {styles.grid8}>
-                    <Button variant = "contained" onClick={onClick}>Update</Button>
+                    <Button className={styles.updateBtn} variant = "contained" onClick={onClick}>Update</Button>
+                </div>
+                <div className = {styles.grid9}>
+                    <img className={styles.kartLogo} src = "../1kart circle.jpg" />
                 </div>
             </div>
         </div>
