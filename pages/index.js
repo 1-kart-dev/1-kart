@@ -9,7 +9,8 @@ import {initializeApp} from 'firebase/app'
 import {getAuth} from 'firebase/auth'
 import {createUserWithEmailAndPassword} from 'firebase/auth'
 import {signInWithEmailAndPassword} from 'firebase/auth'
-import {sendPasswordResetEmail} from 'firebase/auth'
+import {sendPasswordResetEmail, browserSessionPersistence, setPersistence} from 'firebase/auth'
+import { collection, addDoc, setDoc, doc } from "firebase/firestore"; 
 
 initializeApp({
   apiKey: "AIzaSyC6qrSTPE2DG1GIv42CRNPivqxq7kRdVJs",
@@ -36,7 +37,18 @@ function createUser(email, password) {
   createUserWithEmailAndPassword(auth, email, password)
   .then((userCredential) => {
     // Signed in 
-    const user = userCredential.user;
+    const user = userCredential.user; 
+    const uid = user.uid.toString();
+    const email = user.email;
+    setDoc(doc(firestore, "Users", uid), {
+      uid: uid,
+      email: email,
+      first: 'null',
+      last: '',
+      city: '',
+      state: '',
+      zip: ''
+    })
     // ...
   })
   .catch((error) => {
@@ -47,13 +59,17 @@ function createUser(email, password) {
 }
 
 function signIn(email, password) {
-  signInWithEmailAndPassword(auth, email, password)
-  .then((userCredential) => {
-    // Signed in 
-    const user = userCredential.user;
+  setPersistence(auth, browserSessionPersistence)
+  .then(() => {
+    // Existing and future Auth states are now persisted in the current
+    // session only. Closing the window would clear any existing state even
+    // if a user forgets to sign out.
     // ...
+    // New sign-in will be persisted with session persistence.
+    return signInWithEmailAndPassword(auth, email, password);
   })
   .catch((error) => {
+    // Handle Errors here.
     const errorCode = error.code;
     const errorMessage = error.message;
   });
