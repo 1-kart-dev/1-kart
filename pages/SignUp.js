@@ -29,10 +29,19 @@ function Copyright(props) {
   );
 }
 
+function routeChange() {
+    Router.push('/Kart');
+}
+
 
 export default function SignUp() {
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState('');
+
+    function onClick() {
+        createUser(email, password);
+        routeChange();
+    }
     
     const handleSubmit = async (event) => {
         event.preventDefault();
@@ -188,7 +197,7 @@ export default function SignUp() {
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}
-              onClick={createUser(email, password)}
+              onClick={onClick}
             >
               Sign Up
             </Button>

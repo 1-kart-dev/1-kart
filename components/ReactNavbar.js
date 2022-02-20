@@ -33,6 +33,7 @@ export default function ReactNavbar() {
           </ul>
         </nav>
         <Link href='/SignUp'><button className={styles.button}>Login or Sign Up</button></Link>
+        <Link href='/Account'><button className={styles.button}>Account</button></Link>
       </header>
     </div>
   );

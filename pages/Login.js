@@ -14,6 +14,7 @@ import Container from '@mui/material/Container';
 import styles from '../styles/Login.module.scss';
 import {useState} from 'react'
 import {signIn} from './index'
+import Router from 'next/router'
 
 function Copyright(props) {
   return (
@@ -28,10 +29,19 @@ function Copyright(props) {
   );
 }
 
+function routeChange() {
+  Router.push('/Kart');
+}
+
 
 export default function SignIn() {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState('');
+
+  function onClick() {
+    signIn(email, password);
+    routeChange();
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -94,7 +104,7 @@ export default function SignIn() {
               type="submit"
               fullWidth
               variant="contained"
-              onClick={signIn(email, password)}
+              onClick={onClick}
               sx={{ mt: 3, mb: 2 }}
             >
               Sign In
