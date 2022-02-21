@@ -37,85 +37,16 @@ function routeChange() {
 export default function SignUp() {
     const [email, setEmail] = useState(null);
     const [password, setPassword] = useState('');
+    const [confirm, setConfirm] = useState('');
+    const [errorMessage, setErrorMessage] = useState('');
 
-    function onClick() {
-        createUser(email, password);
-        routeChange();
-    }
     
-    const handleSubmit = async (event) => {
-        event.preventDefault();
-        const data = new FormData(event.currentTarget);
-        // eslint-disable-next-line no-console
-        var first = JSON.stringify(data.get('firstName'));
-        var last = JSON.stringify(data.get('lastName'));
-        var password = JSON.stringify(data.get('password'));
-        var email = JSON.stringify(data.get('email'));
-        var len = password.length;
-        if (len < 8) {
-            window.alert("Password must be at least 8 characters long.");
-            return;
-        }
-        var noCap = true;
-        var noUnd = true;
-        var noSpec = true;
-        for (var i = 0; i < len; i++) {
-            var charCode = password.charCodeAt(i);
-            if (charCode >= 'A'.charCodeAt(0) && charCode <= 'Z'.charCodeAt(0)) {
-                noCap = false;
-            } else if (charCode >= 'a'.charCodeAt(0) && charCode <= 'z'.charCodeAt(0)) {
-                noUnd = false;
-            } else if (charCode >= '!'.charCodeAt(0) && charCode <= '/'.charCodeAt(0)) {
-                noSpec = false;
-            } else if (charCode >= ':'.charCodeAt(0) && charCode <= '@'.charCodeAt(0)) {
-                noSpec = false;
-            } else if (charCode >= '['.charCodeAt(0) && charCode <= '`'.charCodeAt(0)) {
-                noSpec = false;
-            }
-        }
-        if (noCap) {
-            if (noUnd) {
-                if (noSpec) {
-                    window.alert("Password must contain an uppercase letter, a lowercase letter, and a special character.");
-                    return;
-                }
-                window.alert("Password must contain an uppercase letter and a lowercase letter.");
-                return;
-            }
-            if (noSpec) {
-                window.alert("Password must contain an uppercase letter and a special character.");
-                return;
-            }
-            window.alert("Password must contain an uppercase letter.");
-            return;
-        }
-        if (noUnd) {
-            if (noSpec) {
-                window.alert("Password must contain a lowercase letter and a special character.");
-                return;
-            }
-            window.alert("Password must contain a lowercase letter.");
-            return;
-        }
-        if (noSpec) {
-            window.alert("Password must contain a special character.");
-            return;
-        }
-
-        var id = Date.now();
-        const response = await fetch('/api/create', {
-            method: 'POST',
-            body: JSON.stringify({first, last, email, password, id}),
-            headers: {
-                'Content-Type': 'application/json'
-            }
-        })
-        const res = await response.json();
-        if (res.message === "Fail") {
-            window.alert("User already exists");
+    function onClick() {
+        if (password != confirm) {
+          setErrorMessage("Passwords must match")
         } else {
-            Router.push('/Kart');
-            console.log("hey");
+          createUser(email, password);
+          routeChange();
         }
     }
 
@@ -137,29 +68,8 @@ export default function SignUp() {
           <Typography component="h1" variant="h5">
             Sign up
           </Typography>
-          <Box component="form" noValidate onSubmit={handleSubmit} sx={{ mt: 3 }}>
+          <Box component="form" noValidate sx={{ mt: 3 }}>
             <Grid container spacing={2}>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  autoComplete="given-name"
-                  name="firstName"
-                  required
-                  fullWidth
-                  id="firstName"
-                  label="First Name"
-                  autoFocus
-                />
-              </Grid>
-              <Grid item xs={12} sm={6}>
-                <TextField
-                  required
-                  fullWidth
-                  id="lastName"
-                  label="Last Name"
-                  name="lastName"
-                  autoComplete="family-name"
-                />
-              </Grid>
               <Grid item xs={12}>
                 <TextField
                   required
@@ -186,14 +96,20 @@ export default function SignUp() {
                 />
               </Grid>
               <Grid item xs={12}>
-                <FormControlLabel
-                  control={<Checkbox value="allowExtraEmails" color="primary" />}
-                  label="I wanna keep up with 1Kart, send me emails!"
+                <TextField
+                  required
+                  fullWidth
+                  name="confirm"
+                  label="Confirm Password"
+                  type="password"
+                  value={confirm}
+                  onInput={e => setConfirm(e.target.value)}
                 />
               </Grid>
+              {errorMessage && <div className={styles.errorMsg}> {errorMessage} </div>}
             </Grid>
             <Button
-              type="submit"
+              type="button"
               fullWidth
               variant="contained"
               sx={{ mt: 3, mb: 2 }}

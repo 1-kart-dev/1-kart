@@ -33,7 +33,6 @@ function routeChange() {
   Router.push('/Kart');
 }
 
-
 export default function SignIn() {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState('');
@@ -95,10 +94,6 @@ export default function SignIn() {
               autoComplete="current-password"
               value={password}
               onInput={e => setPassword(e.target.value)}
-            />
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
             />
             <Button
               type="submit"

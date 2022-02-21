@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.scss";
 import Link from 'next/link'
+import AccountBoxIcon from '@material-ui/icons/AccountBox';
 
 export default function ReactNavbar() {
   const [width, setWidth] = useState(null);
@@ -32,8 +33,7 @@ export default function ReactNavbar() {
             <li className={styles.li}><a className={styles.a} href="#">Wishlist</a></li>
           </ul>
         </nav>
-        <Link href='/SignUp'><button className={styles.button}>Login or Sign Up</button></Link>
-        <Link href='/Account'><button className={styles.button}>Account</button></Link>
+        <Link href='/Account'><button className={styles.button}><AccountBoxIcon /></button></Link>
       </header>
     </div>
   );

@@ -7,7 +7,7 @@ import 'firebase/firestore'
 import {getFirestore} from 'firebase/firestore'
 import {initializeApp} from 'firebase/app'
 import {getAuth} from 'firebase/auth'
-import {createUserWithEmailAndPassword} from 'firebase/auth'
+import {createUserWithEmailAndPassword, sendEmailVerification} from 'firebase/auth'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import {sendPasswordResetEmail, browserSessionPersistence, setPersistence} from 'firebase/auth'
 import { collection, addDoc, setDoc, doc } from "firebase/firestore"; 
@@ -43,7 +43,7 @@ function createUser(email, password) {
     setDoc(doc(firestore, "Users", uid), {
       uid: uid,
       email: email,
-      first: 'null',
+      first: '',
       last: '',
       city: '',
       state: '',
@@ -70,7 +70,6 @@ function signIn(email, password) {
   })
   .catch((error) => {
     // Handle Errors here.
-    const errorCode = error.code;
     const errorMessage = error.message;
   });
 }
