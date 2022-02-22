@@ -18,10 +18,11 @@ export default function SubKarts() {
         <div>
             <ReactNavbar />
             <div className = {styles.container2}>
-                <h2>You can create SubKarts to store different options for a particular item</h2>
-                <h3>Click the Button below to get started</h3>
+                <h2 className={styles.skH2}>You can create SubKarts to store different options for a particular item</h2>
+                <h3 className={styles.skH3}>Click the Button below to get started</h3>
                 <Button 
                 variant="contained" 
+<<<<<<< HEAD
                 startIcon={<AddIcon />}
                 onClick={handleShow}>
                     Create SubKart
@@ -67,6 +68,12 @@ export default function SubKarts() {
                         <Button variant="contained" color="success" startIcon={<AddIcon />}>Add Item</Button>
                     </div>
                 </div>
+=======
+                className={styles.createSK}
+                startIcon={<AddIcon />}>
+                    Create SubKart
+                </Button>
+>>>>>>> 30694472bba65aa1fb0e0710458c878c3817cc4b
             </div>
         </div>
     );

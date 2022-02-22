@@ -1,3 +1,4 @@
+@use 'variables';
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap");
 
 .container {
@@ -13,9 +14,6 @@
   align-items: center;
 }
 
-.h1 {
-  font-size: 2rem;
-}
 
 /* This section is for the navbar */
 .header {
@@ -69,7 +67,7 @@
 
 .button {
   padding: 9px 25px;
-  background-color: rgb(220, 251, 255);
+  background-color: rgb(244, 250, 255);
   border-radius: 50px;
   cursor: pointer;
   border:rgb(0, 0, 0);
@@ -81,95 +79,7 @@
   background-color: rgba(155, 227, 255, 0.8);
 }
 
-/* This section has the kart css */
-
-.tableContainer {
-  width: 60%;
-  border-radius: 2rem;
-  border: 0.1rem solid #B5B0AF;
-  padding: .5rem;
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.itemContainer {
-  margin: auto;
-  display: inline-block;
-  border: 0.1rem solid #8FADF9;
-  font-family: 'Courier New', Courier, monospace;
-  margin-bottom: .5rem;
-  min-width: 100%;
-}
-
-.logoContainer {
-  padding: .6rem;
-  margin: auto;
-  min-width: none;
-  max-width: 20%;
-  float: left;
-}
-
-.imgContainer {
-  padding: .6rem;
-  margin: auto;
-  min-width: none;
-  max-width: 20%;
-  float: left;
-}
-
-.itemDescr {
-  padding: .6rem;
-  font-size: .7rem;
-  margin: auto;
-  text-align: left;
-  vertical-align: top;
-  float: left;
-  min-width: none;
-  max-width: 30%;
-}
-
-.itemMisc {
-  padding: .6rem;
-  font-size: .7rem;
-  margin: auto;
-  vertical-align: bottom;
-  float: left;
-  min-width: none;
-  max-width: 30%;
-}
-
-.divider {
-  width: .3rem;
-  height: auto;
-  display: inline-block;
-}
-
-.delete {
-  border: .1rem solid #f44336;
-  background-color: white;
-  font-family: 'Courier New', Courier, monospace;
-  transition-duration: 0.4s;
-}
-
-.moveTo {
-  background-color: white;
-  border: .1rem solid #8FADF9;
-  font-family: 'Courier New', Courier, monospace;
-  transition-duration: 0.4s;
-}
-
-.delete:hover {
-  background-color: #f44336;
-  color: white;
-}
-
-.moveTo:hover {
-  background-color: #8FADF9;
-  color: white;
-}
-
 /* IDK what this is for */
-
 .footer {
   display: flex;
   flex: 1;
@@ -293,12 +203,25 @@
   border-top: 0.1rem solid #B5B0AF;
 }
 
-.itemContainer1 h2 + h3 {
-  margin-top: -0.6rem;
-}
-
 .form {
   padding-top: .5rem;
+}
+
+.skH2, .skH3 {
+  font-size: 1.5rem;
+}
+
+.skH2 {
+  padding-top: .75rem;
+}
+
+.skH3 {
+  margin-top: 0.4rem;
+}
+
+.createSK {
+  margin-top: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 
 /* SignUp */
@@ -335,5 +258,303 @@
   width: 65%;
   border-radius: .5rem;
   border: 0.1rem solid #B5B0AF;
+<<<<<<< HEAD
   margin: 0.5rem;
 }
+=======
+}
+
+/* Account & ActMenu */
+
+.menu1 {
+  height: 100vh;
+  text-align: center;
+  width: 15%;
+  border: 0.1rem solid #B5B0AF;
+  border-radius: 1rem;
+  float: left;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+}
+
+.profile {
+  float: left;
+  height: 100vh;
+  width: 80%;
+  display: grid;
+  gap: 1em 1em;
+  padding-left: 1em;
+}
+
+.grid1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding-top: 3em;
+}
+
+.grid2 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.grid3 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.grid4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.grid5 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.grid6 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.grid7 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 3;
+  grid-row-end: 4;
+}
+
+.grid8 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 5;
+  align-content: center;
+}
+
+.grid9 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  padding-top: 1em;
+}
+
+.kartLogo {
+  width: 150px;
+  height: 150px;
+}
+
+.grid1 h2 {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 2rem;
+}
+
+.grid2, .grid3, .grid4, .grid5, .grid6, .grid7, .grid8 label {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+}
+
+.updateBtn:hover {
+  background-color: white;
+  color: blue;
+}
+
+.menuBtn:hover {
+  background-color: blue;
+  color: white;
+}
+
+.menuBtn:active {
+  background-color: blue;
+  color: white;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+/* Account History */
+
+.history {
+  float: left;
+  height: 100vh;
+  width: 80%;
+  display: grid;
+  gap: 1em 1em;
+  padding-left: 1em;
+}
+
+.history h2 {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 2rem;
+  padding-top: 1em;
+}
+
+.history p {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 1.5rem;
+  margin-top: -9.5em;
+}
+
+.history img {
+  position: absolute;
+  top: 0em;
+  right: 3em;
+}
+
+/* Account About */
+
+.about {
+  float: left;
+  height: 100vh;
+  width: 80%;
+  display: grid;
+  gap: 1em 1em;
+  padding-left: 1em;
+}
+
+.about h2 {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 2rem;
+  padding-top: 1em;
+}
+
+.about p {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 1.5rem;
+  margin-top: 3em;
+}
+
+.about img {
+  position: absolute;
+  top: 0em;
+  right: 3em;
+}
+
+.infoCards {
+  display: grid;
+  gap: 1em 1em;
+  padding-left: 1em;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+}
+
+.card1, .card2, .card3, .card4 {
+  width: 80%;
+  height: 100%;
+}
+
+.card1 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.card2 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.card3 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.card4 {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+/* Account Privacy */
+
+.privacy {
+  float: left;
+  height: 100vh;
+  width: 80%;
+  display: grid;
+  gap: 1em 1em;
+  padding-left: 1em;
+}
+
+.privacy h2 {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 2rem;
+  padding-top: 1em;
+}
+
+.privacy p {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 1.5rem;
+  margin-top: 3em;
+  padding-bottom: 1em;
+}
+
+.privacy img {
+  position: absolute;
+  top: 0em;
+  right: 3em;
+}
+
+/* Account Security */
+
+.security {
+  float: left;
+  height: 100vh;
+  width: 80%;
+  display: grid;
+  gap: 1em 1em;
+  padding-left: 1em;
+}
+
+.security h2 {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 2rem;
+  padding-top: 1em;
+}
+
+.security p {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
+  font-size: 1.5rem;
+  margin-top: 3em;
+}
+
+.security img {
+  position: absolute;
+  top: 0em;
+  right: 3em;
+}
+
+>>>>>>> 30694472bba65aa1fb0e0710458c878c3817cc4b

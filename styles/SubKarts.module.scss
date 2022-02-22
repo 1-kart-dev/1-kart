@@ -1,0 +1,24 @@
+@use 'variables';
+@use 'Home.module';
+
+.container2 {
+    padding: 0 2rem;
+    text-align: center;
+  }
+  
+  .kartContainer {
+    border-radius: 2rem;
+    border: 0.1rem solid #B5B0AF;
+    padding: .5rem;
+    margin-top: 2rem;
+    width: 60%;
+    margin: 1rem auto;
+  }
+  
+  .itemContainer1 {
+    border-top: 0.1rem solid #B5B0AF;
+  }
+  
+  .itemContainer1 h2 + h3 {
+    margin-top: -0.6rem;
+  }

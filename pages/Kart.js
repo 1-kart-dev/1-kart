@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Home.module.scss'
+import styles from '../styles/Kart.module.scss'
 import ReactNavbar from '../components/ReactNavbar'
 import { useTable } from 'react-table'
 

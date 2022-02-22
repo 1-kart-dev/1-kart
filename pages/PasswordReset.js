@@ -13,7 +13,8 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import styles from '../styles/Login.module.scss';
 import {useState} from 'react'
-import {signIn} from './index'
+import {resetPassword} from './index'
+import Router from 'next/router'
 
 function Copyright(props) {
   return (
@@ -28,10 +29,18 @@ function Copyright(props) {
   );
 }
 
+function routeChange() {
+  Router.push('/Login');
+}
+
 
 export default function PasswordReset() {
   const [email, setEmail] = useState(null);
-  const [password, setPassword] = useState('');
+
+  function onClick() {
+    resetPassword(email);
+    routeChange();
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -61,6 +70,9 @@ export default function PasswordReset() {
           <Typography component="h1" variant="h5">
             Reset my password
           </Typography>
+          <Typography component="h2" variant="h5">
+            A link will be sent to the email you indicate below
+          </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
             <TextField
               margin="normal"
@@ -78,7 +90,7 @@ export default function PasswordReset() {
               type="submit"
               fullWidth
               variant="contained"
-              onClick={signIn(email, password)}
+              onClick={onClick}
               sx={{ mt: 3, mb: 2 }}
             >
               Reset Password
