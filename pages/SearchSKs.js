@@ -1,5 +1,9 @@
 import React from 'react'
 import styles from '../styles/Home.module.scss'
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline'
+import EditIcon from '@mui/icons-material/Edit'
+import Button from '@mui/material/Button'
+import AddIcon from '@mui/icons-material/Add'
 
 export default function SearchSks() {
     return(
