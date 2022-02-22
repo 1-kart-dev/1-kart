@@ -1,13 +1,15 @@
 import React from 'react'
 import styles from '../styles/Kart.module.scss'
 import ReactNavbar from '../components/ReactNavbar'
+import MyKart from '../components/MyKart'
 import { useTable } from 'react-table'
 
 export default function Kart() {
     return(
         <div>
             <ReactNavbar />
-            <div className = {styles.container}>
+            <MyKart />
+            {/* <div className = {styles.container}>
                 <div className = {styles.tableContainer}>
                     <h2>Your Active Kart</h2>
                     <div className = {styles.itemContainer}>
@@ -85,7 +87,7 @@ export default function Kart() {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </div>
     );
 }

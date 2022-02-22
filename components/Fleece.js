@@ -16,26 +16,31 @@ export default function KartItem() {
             <Grid item xs={3} sm={2}>
                 <Grid container={'true'} spacing={1}>
                     <Grid item xs={3} className={styles.images}>
-                        {/* BRAND IMAGE */}
+                        {/* BRAND */}
+                        <Image src="/../public/nikelogo.png" alt="Nike logo" width="100vw" height="100vh" layout="intrinsic"/>
                     </Grid>
                     <Grid item xs={9} className={styles.text}>
-                        {/* DATE ADDED TO KART */}
+                        <Typography variant="subtitle1">2/22/22</Typography>
                     </Grid>
                     <Grid item xs={12} className={styles.images}>
                         {/* PRODUCT IMAGE */}
+                        <Image src="/../public/nike-techfleece.jpg" alt="Nike TechFleece" width="100vw" height="100vh" layout="intrinsic"/>
                     </Grid>
                 </Grid>
             </Grid>
             <Grid item xs={9} sm={10}>
                 <Grid container={'true'}>
-                    {/* ITEM NAME */}
+                    {/* ITEM NAME, PRICE / RATING, DESCRIPTION, QUANTITY / WISHLIST / SUBKART / REMOVE */}
                     <Grid item xs={12} className={styles.itemName}>
+                        <Typography variant="h6" classes={styles.itemName}><b>Sportswear Tech Fleece</b></Typography>
                     </Grid>
                     <Grid item xs={12} className={styles.itemPrice}>
-                        {/* ITEM PRICE / RATING */}
+                        <Typography variant="subtitle1"><b>$110</b></Typography>
+                        {/* INSERT RATING HERE */}
                     </Grid>
                     <Grid item xs={12} className={styles.itemDesc}>
-                        {/* ITEM INFO / DESCRPTION */}
+                        <Typography><b>Color:</b> brown basalt/black</Typography>
+                        <Typography><b>Size:</b> L</Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <Grid container>
