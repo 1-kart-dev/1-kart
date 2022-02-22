@@ -10,7 +10,7 @@ import axios from "axios";
 export default function createSK() {
     const [kart, setKart] = useState({
         kart_name: "",
-        item_ids: [],
+        items: [],
         uid: ""
     });
 

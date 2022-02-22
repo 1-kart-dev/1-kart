@@ -9,10 +9,15 @@ export default async (req, res) => {
     if (itemsData.some((item) => item.item_id === item_id)) {
       res.status(400).end();
     } else {
-      const { id } = await db.collection("items").add({
+      const itemRef = db.collection("items").doc();
+      const {id} = itemRef;
+
+      await itemRef.set({
+        item_id: id,
         ...req.body,
         created: new Date().toISOString(),
       });
+
       res.status(200).json({ id });
     }
   } catch (e) {

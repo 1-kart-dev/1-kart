@@ -11,16 +11,10 @@ import {createUserWithEmailAndPassword, sendEmailVerification} from 'firebase/au
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import {sendPasswordResetEmail, browserSessionPersistence, setPersistence} from 'firebase/auth'
 import { collection, addDoc, setDoc, doc } from "firebase/firestore"; 
+import authAccount from "../.env.development.local/authAccountKey.json";
+import axios from "axios";
 
-initializeApp({
-  apiKey: "AIzaSyC6qrSTPE2DG1GIv42CRNPivqxq7kRdVJs",
-  authDomain: "kart-8df20.firebaseapp.com",
-  projectId: "kart-8df20",
-  storageBucket: "kart-8df20.appspot.com",
-  messagingSenderId: "597913451329",
-  appId: "1:597913451329:web:3ea9f8971c6f7183f5ffc0",
-  measurementId: "G-CWPFFLWJV5"
-});
+initializeApp(authAccount);
 
 const firestore = getFirestore();
 const auth = getAuth();
@@ -48,7 +42,12 @@ function createUser(email, password) {
       city: '',
       state: '',
       zip: ''
-    })
+    });
+    axios.post(`/api/kart/`, {
+      kart_name: "Kart",
+      item_ids: [],
+      uid: uid
+    });
     // ...
   })
   .catch((error) => {
