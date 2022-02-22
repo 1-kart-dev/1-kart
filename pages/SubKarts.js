@@ -6,14 +6,10 @@ import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import SearchSks from './SearchSKs'
-import CreateSubkartModal from '../components/CreateSubkartModal';
 
 export default function SubKarts() {
     const [show, setShow] = useState(false);
-
-    const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
-    
+   
     return(
         <div>
             <ReactNavbar />
@@ -23,10 +19,9 @@ export default function SubKarts() {
                 <Button 
                 variant="contained" 
                 startIcon={<AddIcon />}
-                onClick={handleShow}>
+                href='./CreateSK'>
                     Create SubKart
                 </Button>
-                <CreateSubkartModal show={show} onHide={handleClose}/>
                 <SearchSks />
                 <div className = {styles.kartContainer}>
                     <h2>Shoes</h2>

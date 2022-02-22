@@ -1,22 +1,47 @@
-import React from 'react'
 import styles from '../styles/Home.module.scss'
+import Button from "@mui/material/Button"
+import EditIcon from "@mui/icons-material/Edit"
+import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline"
+import React, { useState, useEffect } from "react";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from '../pages/index'
+import axios from "axios";
 
 export default function createSK() {
+    const [kart, setKart] = useState({
+        kart_name: "",
+        item_ids: [],
+        uid: ""
+    });
+
+    const submitForm = async (e) => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                console.log("currentUser:" + user.email)
+                setKart({...kart, uid: user.uid});
+            }
+        })
+        e.preventDefault();
+        axios.post(`/api/kart/`, kart)
+    };
+
     return (
         <div className={styles.container}>
             <div className = {styles.kartContainer}>
-                <h2>Shoes</h2>
-                <div className = {styles.itemContainer1}>
-                    <h2>Nike</h2>
-                    <h3>Air Jordan Retro 13</h3>
-                    <p>Price: $190</p>
-                    <p>URL: https://www.nike.com/t/air-jordan-13-retro-mens-shoes-Wgz8G4/DJ5982-015</p>
-                    <div className = {styles.btnContainer}>
-                        <Button variant="outlined" endIcon={<EditIcon />}>Edit</Button>
-                        <div className = {styles.divider}></div>
-                        <Button variant="outlined" color="error" endIcon={<RemoveCircleOutlineIcon />}>Remove</Button>
-                    </div>
-                </div>
+                <form className={styles.form} onSubmit={submitForm}>
+                    <h3>Create Subkart</h3>
+                    <input placeholder="Name" 
+                    className={styles.input1} 
+                    onChange={(e) => {
+                        setKart({ ...kart, kart_name: e.target.value });
+                    }}></input>
+                    <select placeholder="Items" className={styles.input1}>
+                        <option value="" disabled="disabled" selected="selected">
+                            Select items
+                        </option>  
+                    </select>
+                    <input value="Submit" className={styles.input1} type="submit" />
+                </form>
             </div>
         </div>
     );

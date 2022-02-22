@@ -2,13 +2,26 @@ import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.scss";
 import Modal from '@mui/material/Modal';
 import axios from "axios";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from '../pages/index'
 
 export default function CreateSubkartModal(props) {
     const [kart, setKart] = useState({
         kart_id: "",
         kart_name: "",
         item_ids: [],
+        uid: ""
     });
+
+    // useEffect(() => {
+    //     onAuthStateChanged(auth, (user) => {
+    //         if(user) {
+    //             setKart({...kart, uid: user.uid})
+    //         } 
+    //     }
+    //     )
+    // })
+
     const submitForm = async (e) => {
         e.preventDefault();
         axios.post(`/api/kart/`, kart)
