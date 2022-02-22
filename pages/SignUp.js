@@ -33,6 +33,10 @@ function routeChange() {
     Router.push('/Kart');
 }
 
+var errorMsg = "hey";
+export function handleErrors2(message) {
+  errorMsg = message;
+}
 
 export default function SignUp() {
     const [email, setEmail] = useState(null);
@@ -44,6 +48,8 @@ export default function SignUp() {
     function onClick() {
         if (password != confirm) {
           setErrorMessage("Passwords must match")
+        } else if (errorMsg != "hey") {
+          setErrorMessage(errorMsg);
         } else {
           createUser(email, password);
           routeChange();

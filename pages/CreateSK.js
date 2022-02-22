@@ -1,4 +1,5 @@
 import styles from '../styles/Home.module.scss'
+<<<<<<< HEAD
 import Button from "@mui/material/Button"
 import EditIcon from "@mui/icons-material/Edit"
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline"
@@ -6,6 +7,11 @@ import React, { useState, useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../pages/index'
 import axios from "axios";
+=======
+import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline'
+import EditIcon from '@mui/icons-material/Edit'
+import Button from '@mui/material/Button'
+>>>>>>> a3f74d267ecc587f15778cc7ff9dcaed2b27ccd8
 
 export default function createSK() {
     const [kart, setKart] = useState({

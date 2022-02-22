@@ -19,7 +19,7 @@ export default function ActSecurity() {
                     it from the public. 
                 </p>
                 <p>
-                    For more information on Google Firebase's security protocols please visit this <a href='https://firebase.google.com/support/privacy'>site.</a> If 
+                    For more information on Google Firebase&apos;s security protocols please visit this <a href='https://firebase.google.com/support/privacy'>site.</a> If 
                     you have questions not addressed by Google or this page, please find our 
                     contact information on the about page! - The 1Kart Team
                 </p>

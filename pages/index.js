@@ -1,7 +1,6 @@
 import React from 'react'
 import styles from '../styles/Home.module.scss'
 import HomePage from './HomePage'
-import firebase from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firestore'
 import {getFirestore} from 'firebase/firestore'
@@ -10,9 +9,11 @@ import {getAuth} from 'firebase/auth'
 import {createUserWithEmailAndPassword, sendEmailVerification} from 'firebase/auth'
 import {signInWithEmailAndPassword} from 'firebase/auth'
 import {sendPasswordResetEmail, browserSessionPersistence, setPersistence} from 'firebase/auth'
-import { collection, addDoc, setDoc, doc } from "firebase/firestore"; 
 import authAccount from "../.env.development.local/authAccountKey.json";
 import axios from "axios";
+import { setDoc, doc } from "firebase/firestore"; 
+import { handleErrors } from './Login'
+import { handleErrors2 } from './SignUp'
 
 initializeApp(authAccount);
 
@@ -51,8 +52,8 @@ function createUser(email, password) {
     // ...
   })
   .catch((error) => {
-    const errorCode = error.code;
     const errorMessage = error.message;
+    return handleErrors2(errorMessage);
     // ..
   });
 }
@@ -70,6 +71,7 @@ function signIn(email, password) {
   .catch((error) => {
     // Handle Errors here.
     const errorMessage = error.message;
+    return handleErrors(errorMessage);
   });
 }
 
