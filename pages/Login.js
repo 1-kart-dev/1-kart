@@ -33,13 +33,23 @@ function routeChange() {
   Router.push('/Kart');
 }
 
+var errorMessage = "hey";
+export function handleErrors(message) {
+  errorMessage = message;
+}
+
 export default function SignIn() {
   const [email, setEmail] = useState(null);
   const [password, setPassword] = useState('');
+  const [displayError, setDisplayError] = useState('');
 
   function onClick() {
     signIn(email, password);
-    routeChange();
+    if (errorMessage != "hey") {
+      setDisplayError(errorMessage);
+    } else {
+      routeChange();
+    }
   }
 
   const handleSubmit = (event) => {
@@ -95,6 +105,7 @@ export default function SignIn() {
               value={password}
               onInput={e => setPassword(e.target.value)}
             />
+            {displayError && <div className={styles.errorMsg}> {displayError} </div>}
             <Button
               type="submit"
               fullWidth
