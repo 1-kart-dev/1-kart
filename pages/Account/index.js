@@ -10,15 +10,10 @@ import ActMenu from './ActMenu';
 import axios from 'axios';
 
 export default function Account() {
-    const[email, setEmail] = useState('');
-    const[last, setLast] = useState('');
-    const[zip, setZip] = useState('');
-    const[state, setState] = useState('');
-    const[city, setCity] = useState('');
-    const[first, setFirst] = useState('');
+    const[formData, setFormData] = useState({});
     const[uid, setUid] = useState('');
     const[userData, setUserData] = 
-    useState({intFirst: '', intLast: '', intEmail: '', intCity: '', intState: '', intZip: ''  });
+    useState({});
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -28,12 +23,11 @@ export default function Account() {
               // ..
             }
         });
-    });
+    }, []);
 
     useEffect(() => {
         if(uid != '') {
             axios.get(`/api/users/${uid}`).then((res) => {
-                console.log(res.data);
                 setUserData(res.data);
              })
         }
@@ -41,14 +35,7 @@ export default function Account() {
         
     const onClick = async (e) => {
         e.preventDefault();
-        await axios.put("/api/users/${uid}", {
-            email: email,
-            first: first,
-            last: last,
-            city: city,
-            state: state,
-            zip: zip,
-        });
+        await axios.put(`/api/users/${uid}`, formData);
     }
 
     return (
@@ -62,9 +49,8 @@ export default function Account() {
                     <FormControl>
                         <label>First Name</label>
                         <OutlinedInput
-                        value={first}
-                        onInput = {e => setFirst(e.target.value)}
-                        placeholder={userData.intFirst}
+                        onInput = {e => setFormData({...formData, first: e.target.value})}
+                        placeholder={userData.first}
                         label = "First Name"/>
                     </FormControl>
                 </div>
@@ -72,9 +58,9 @@ export default function Account() {
                     <FormControl>
                         <label>Last Name</label>
                         <OutlinedInput
-                        value = {last}
-                        onInput = {e => setLast(e.target.value)}
-                        placeholder={userData.intLast}
+                        value = {formData.last}
+                        onInput = {e => setFormData({...formData, last: e.target.value})}
+                        placeholder={userData.last}
                         label = "Last Name"/>
                     </FormControl>
                 </div>
@@ -82,9 +68,9 @@ export default function Account() {
                     <FormControl>
                         <label>Email</label>
                         <OutlinedInput
-                        value={email}
-                        onInput = {e => setEmail(e.target.value)}
-                        placeholder={userData.intEmail}
+                        value={formData.email}
+                        onInput = {e => setFormData({...formData, email: e.target.value})}
+                        placeholder={userData.email}
                         label = "Email"/>
                     </FormControl>
                 </div>
@@ -92,9 +78,9 @@ export default function Account() {
                     <FormControl>
                         <label>City</label>
                         <OutlinedInput
-                        value = {city}
-                        onInput = {e => setCity(e.target.value)}
-                        placeholder={userData.intCity}
+                        value = {formData.city}
+                        onInput = {e => setFormData({...formData, city: e.target.value})}
+                        placeholder={userData.city}
                         label = "City"/>
                     </FormControl>
                 </div>
@@ -102,9 +88,9 @@ export default function Account() {
                     <FormControl>
                         <label>State</label>
                         <OutlinedInput
-                        value = {state}
-                        onInput = {e => setState(e.target.value)}
-                        placeholder={userData.intState}
+                        value = {formData.state}
+                        onInput = {e => setFormData({...formData, state: e.target.value})}
+                        placeholder={userData.state}
                         label = "State"/>
                     </FormControl>
                 </div>
@@ -112,9 +98,9 @@ export default function Account() {
                     <FormControl>
                         <label>Zip</label>
                         <OutlinedInput
-                        value = {zip}
-                        onInput = {e => setZip(e.target.value)}
-                        placeholder={userData.intZip}
+                        value = {formData.zip}
+                        onInput = {e => setFormData({...formData, zip: e.target.value})}
+                        placeholder={userData.zip}
                         label = "Zip"/>
                     </FormControl>
                 </div>
