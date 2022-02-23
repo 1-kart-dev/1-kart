@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Home.module.scss'
+import styles from '../../styles/Home.module.scss'
 import Button from '@mui/material/Button';
 import Router from 'next/router'
 

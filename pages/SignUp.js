@@ -14,7 +14,7 @@ import Container from '@mui/material/Container';
 import styles from '../styles/Login.module.scss';
 import Router from 'next/router'
 import {useState} from 'react';
-import { createUser } from './index'
+import { createUser } from '../lib/auth'
 
 function Copyright(props) {
   return (
@@ -51,6 +51,7 @@ export default function SignUp() {
         } else if (errorMsg != "hey") {
           setErrorMessage(errorMsg);
         } else {
+          console.log(email);
           createUser(email, password);
           routeChange();
         }
