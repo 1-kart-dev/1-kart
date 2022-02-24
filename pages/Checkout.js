@@ -6,9 +6,11 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import { Grid3x3 } from '@mui/icons-material';
 import Button from '@mui/material/Button';
+import LoggedIn from './LoggedIn';
 
 export default function Checkout() {
     return(
+        <LoggedIn>
         <div className={styles.container}>
             <ReactNavbar />
             <div className={styles.checkoutBox}>
@@ -40,5 +42,6 @@ export default function Checkout() {
                 </Grid>
             </div>
         </div>
+        </LoggedIn>
     );
 }
