@@ -4,12 +4,14 @@ import ReactNavbar from '../components/ReactNavbar'
 import MyKart from '../components/MyKart'
 import { useTable } from 'react-table'
 import Navbar from '../components/Navbar'
+import LandingFooter from '../components/LandingFooter'
 
 export default function Kart() {
     return(
         <div>
             <Navbar />
             <MyKart />
+            <LandingFooter />
             {/* <div className = {styles.container}>
                 <div className = {styles.tableContainer}>
                     <h2>Your Active Kart</h2>
