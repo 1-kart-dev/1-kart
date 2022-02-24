@@ -8,6 +8,7 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { CardHeader } from '@mui/material';
+import LoggedIn from '../LoggedIn';
 
 export default function ActAbout() {
     return(
