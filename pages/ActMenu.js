@@ -25,7 +25,7 @@ export default function ActMenu() {
     }
 
     return(
-        <div className={styles.container}>
+        <div className={styles.no_padding_container}>
             <div className = {styles.menu1}>
                 <div className = {styles.tabs}>
                     <Button className={styles.menuBtn} onClick={routeProfile}>Profile</Button>

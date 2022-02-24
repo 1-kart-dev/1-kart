@@ -12,7 +12,7 @@ import { CardHeader } from '@mui/material';
 export default function ActAbout() {
     return(
         <div className = {styles.container}>
-            <ActMenu />
+            <ActMenu/>
             <div className = {styles.about}>
                 <h2>About Us</h2>
                 <img className={styles.kartLogo} src = "../1kart circle.jpg"/>
@@ -63,7 +63,7 @@ export default function ActAbout() {
                                     Sam Lempp
                                 </Typography>
                                 <Typography color="textSecondary">
-                                    Software Developer
+                                    Lead Developer
                                 </Typography>
                                 <Typography variant="body2" component="p">
                                     Email: sam@1-kart.com
@@ -78,7 +78,7 @@ export default function ActAbout() {
                                     Andrew Mahn
                                 </Typography>
                                 <Typography color="textSecondary">
-                                    Software Developer
+                                    Front-End Developer
                                 </Typography>
                                 <Typography variant="body2" component="p">
                                     Email: andrew@1-kart.com
