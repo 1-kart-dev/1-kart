@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../lib/auth'
 import axios from "axios";
+import LoggedIn from './LoggedIn';
 
 export default function CreateSK() {
     const [kart, setKart] = useState({
