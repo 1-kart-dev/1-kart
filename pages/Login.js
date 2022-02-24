@@ -13,7 +13,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import styles from '../styles/Login.module.scss';
 import {useState} from 'react'
-import {signIn} from './index'
+import {signIn} from '../lib/auth'
 import Router from 'next/router'
 
 function Copyright(props) {

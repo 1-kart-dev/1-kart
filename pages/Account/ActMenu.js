@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Home.module.scss'
+import styles from '../../styles/Home.module.scss'
 import Button from '@mui/material/Button';
 import Router from 'next/router'
 
@@ -9,19 +9,19 @@ export default function ActMenu() {
     }
 
     function routeHistory() {
-        Router.push('/ActHist');
+        Router.push('/Account/History');
     }
 
     function routePrivacy() {
-        Router.push('/ActPriv');
+        Router.push('/Account/Privacy');
     }
 
     function routeSecurity() {
-        Router.push('/ActSecurity');
+        Router.push('/Account/Security');
     }
 
     function routeAbout() {
-        Router.push('/ActAbout');
+        Router.push('/Account/About');
     }
 
     function routeKart() {

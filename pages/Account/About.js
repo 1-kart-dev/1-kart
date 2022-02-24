@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from '../styles/Home.module.scss'
+import styles from '../../styles/Home.module.scss'
 import ActMenu from './ActMenu';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';

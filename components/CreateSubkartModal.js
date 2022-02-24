@@ -1,35 +1,41 @@
-import styles from '../styles/Home.module.scss'
-import Button from "@mui/material/Button"
-import EditIcon from "@mui/icons-material/Edit"
-import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline"
 import React, { useState, useEffect } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from '../lib/auth'
+import styles from "../styles/Home.module.scss";
+import Modal from '@mui/material/Modal';
 import axios from "axios";
+import { onAuthStateChanged } from "firebase/auth";
+import { auth } from '../pages/index'
 
-export default function createSK() {
+export default function CreateSubkartModal(props) {
     const [kart, setKart] = useState({
+        kart_id: "",
         kart_name: "",
-        items: [],
+        item_ids: [],
         uid: ""
     });
 
+    // useEffect(() => {
+    //     onAuthStateChanged(auth, (user) => {
+    //         if(user) {
+    //             setKart({...kart, uid: user.uid})
+    //         } 
+    //     }
+    //     )
+    // })
+
     const submitForm = async (e) => {
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                console.log("currentUser:" + user.email)
-                setKart({...kart, uid: user.uid});
-            }
-        })
         e.preventDefault();
         axios.post(`/api/kart/`, kart)
     };
-
     return (
-        <div className={styles.container}>
-            <div className = {styles.kartContainer}>
+        <Modal open = {props.show} onClose={props.onHide}>
+            <div className={styles.formContainer}>
                 <form className={styles.form} onSubmit={submitForm}>
                     <h3>Create Subkart</h3>
+                    <input placeholder="Kart Id" 
+                    className={styles.input1} 
+                    onChange={(e) => {
+                        setKart({ ...kart, kart_id: e.target.value });
+                    }}></input>
                     <input placeholder="Name" 
                     className={styles.input1} 
                     onChange={(e) => {
@@ -43,6 +49,6 @@ export default function createSK() {
                     <input value="Submit" className={styles.input1} type="submit" />
                 </form>
             </div>
-        </div>
-    );
+        </Modal>
+    )
 }
