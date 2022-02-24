@@ -1,0 +1,24 @@
+@use 'variables';
+
+.kartWrapper {
+    border: "2px solid black"
+}
+
+.footer {
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.button {
+    padding: 9px 20px;
+    background-color: rgb(244, 250, 255);
+    border-radius: 50px;
+    cursor: pointer;
+    border:rgb(0, 0, 0);
+    display: block;
+    white-space: nowrap;
+    justify-items: center;
+    text-align: center;
+}
