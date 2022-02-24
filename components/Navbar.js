@@ -26,11 +26,10 @@ export default function Navbar() {
                 <ul className={styles.nav_links} sx={{ overflow: 'auto' }}>
                     <li className={styles.li}><Link className={styles.a} href='/Kart'>Kart</Link></li>
                     <li className={styles.li}><Link className={styles.a} href='/SubKarts'>SubKarts</Link></li>
-                    <li className={styles.li}><a className={styles.a} href="#">Wishlist</a></li>
-                    <li className={styles.li}><a className={styles.a} href="#">My Brands</a></li>
-                    <li className={styles.li}><a className={styles.a} href="#">Shipping</a></li>
-                    <li className={styles.li}><a className={styles.a} href="#">History</a></li>
-                    <li className={styles.li}><a className={styles.a} href="#">Wishlist</a></li>
+                    <li className={styles.li}><Link className={styles.a} href='/Kart'>Wishlist</Link></li>
+                    <li className={styles.li}><Link className={styles.a} href='/Kart'>My Brands</Link></li>
+                    <li className={styles.li}><Link className={styles.a} href='/Kart'>Shipping</Link></li>
+                    <li className={styles.li}><Link className={styles.a} href='/Kart'>History</Link></li>
                 </ul>
             </Grid>
             <Grid item xs={4} sm={3} md={2} align="right">

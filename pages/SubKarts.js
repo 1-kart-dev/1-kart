@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import styles from '../styles/Home.module.scss'
-import ReactNavbar from '../components/ReactNavbar'
+import Navbar from '../components/Navbar'
 import Button from '@mui/material/Button';
 import AddIcon from '@mui/icons-material/Add';
 import EditIcon from '@mui/icons-material/Edit';
@@ -14,7 +14,7 @@ export default function SubKarts() {
     return(
         <LoggedIn>
         <div>
-            <ReactNavbar />
+            <Navbar />
             <div className = {styles.container2}>
                 <h2 className={styles.skH2}>This is a temporary page. The page will be updated as development continues!</h2>
                 <Button 
