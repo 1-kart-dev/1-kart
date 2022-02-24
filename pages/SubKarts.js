@@ -11,6 +11,7 @@ export default function SubKarts() {
     const [show, setShow] = useState(false);
    
     return(
+        <LoggedIn>
         <div>
             <ReactNavbar />
             <div className = {styles.container2}>
@@ -64,5 +65,6 @@ export default function SubKarts() {
                 </div>
             </div>
         </div>
+        </LoggedIn>
     );
 }

@@ -11,6 +11,7 @@ import { CardHeader } from '@mui/material';
 
 export default function ActAbout() {
     return(
+        <LoggedIn>
         <div className = {styles.container}>
             <ActMenu/>
             <div className = {styles.about}>
@@ -89,5 +90,6 @@ export default function ActAbout() {
                 </div>
             </div>
         </div>
+        </LoggedIn>
     );
 }

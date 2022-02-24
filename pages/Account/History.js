@@ -4,6 +4,7 @@ import ActMenu from './ActMenu';
 
 export default function ActHist() {
     return(
+        <LoggedIn>
         <div className = {styles.container}>
             <ActMenu />
             <div className = {styles.history}>
@@ -19,5 +20,6 @@ export default function ActHist() {
                 </p>
             </div>
         </div>
+        </LoggedIn>
     );
 }

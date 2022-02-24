@@ -39,16 +39,16 @@ export function handleErrors(message) {
 }
 
 export default function SignIn() {
-  const [email, setEmail] = useState(null);
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [displayError, setDisplayError] = useState('');
 
-  function onClick() {
-    signIn(email, password);
-    if (errorMessage != "hey") {
-      setDisplayError(errorMessage);
-    } else {
+  async function onClick() {
+    const user = await signIn(email, password);
+    if (user) {
       routeChange();
+    } else {
+      setDisplayError(errorMessage);
     }
   }
 
@@ -56,10 +56,6 @@ export default function SignIn() {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
-    console.log({
-      email: data.get('email'),
-      password: data.get('password'),
-    });
   };
 
   return (

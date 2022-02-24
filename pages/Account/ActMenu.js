@@ -2,6 +2,7 @@ import React from 'react'
 import styles from '../../styles/Home.module.scss'
 import Button from '@mui/material/Button';
 import Router from 'next/router'
+import LoggedIn from '../LoggedIn';
 
 export default function ActMenu() {
     function routeProfile() {
@@ -29,6 +30,7 @@ export default function ActMenu() {
     }
 
     return(
+        <LoggedIn>
         <div className={styles.no_padding_container}>
             <div className = {styles.menu1}>
                 <div className = {styles.tabs}>
@@ -51,5 +53,6 @@ export default function ActMenu() {
                 </div>
             </div>
         </div>
+        </LoggedIn>
     );
 }
