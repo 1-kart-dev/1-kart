@@ -7,7 +7,7 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../lib/auth'
 import axios from "axios";
 
-export default function createSK() {
+export default function CreateSK() {
     const [kart, setKart] = useState({
         kart_name: "",
         items: [],

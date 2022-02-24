@@ -23,8 +23,8 @@ export default function Navbar() {
             </Grid>
             <Grid item xs={7} sm={8} md={9}>
                 <ul className={styles.nav_links} sx={{ overflow: 'auto' }}>
-                    <li className={styles.li}><a className={styles.a} href='/Kart'>Kart</a></li>
-                    <li className={styles.li}><a className={styles.a} href='/SubKarts'>SubKarts</a></li>
+                    <li className={styles.li}><Link className={styles.a} href='/Kart'>Kart</Link></li>
+                    <li className={styles.li}><Link className={styles.a} href='/SubKarts'>SubKarts</Link></li>
                     <li className={styles.li}><a className={styles.a} href="#">Wishlist</a></li>
                     <li className={styles.li}><a className={styles.a} href="#">My Brands</a></li>
                     <li className={styles.li}><a className={styles.a} href="#">Shipping</a></li>
