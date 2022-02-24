@@ -9,6 +9,8 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import beatsLogo from '../public/beatslogo.png';
+import studio3 from '../public/beats-studio3.jpg';
 
 export default function KartItem() {
     return (
@@ -17,14 +19,14 @@ export default function KartItem() {
                 <Grid container={'true'} spacing={1}>
                     <Grid item xs={3} className={styles.images}>
                         {/* BRAND */}
-                        <Image src="/../public/beatslogo.png" alt="Nike logo" width="100vw" height="100vh" layout="intrinsic"/>
+                        <Image src={beatsLogo} alt="Nike logo" width="100vw" height="100vh" layout="intrinsic"/>
                     </Grid>
                     <Grid item xs={9} className={styles.text}>
                         <Typography variant="subtitle1">2/22/22</Typography>
                     </Grid>
                     <Grid item xs={12} className={styles.images}>
                         {/* PRODUCT IMAGE */}
-                        <Image src="/../public/beats-studio3.jpg" alt="Nike TechFleece" width="100vw" height="100vh" layout="intrinsic"/>
+                        <Image src={studio3} alt="Nike TechFleece" width="100vw" height="100vh" layout="intrinsic"/>
                     </Grid>
                 </Grid>
             </Grid>

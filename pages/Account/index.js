@@ -107,7 +107,7 @@ export default function Account() {
                         </FormControl>
                     </div>
                     <div className = {styles.grid8}>
-                        <Button className={styles.updateBtn} variant = "contained" onClick={onClick}>Update</Button>
+                        <Button className={styles.updateBtn} variant = "contained" color = "primary" onClick={onClick}>Update</Button>
                     </div>
                     <div className = {styles.grid9}>
                         <img className={styles.kartLogo} src = "../1kart circle.jpg" />
