@@ -1,0 +1,55 @@
+@use 'variables';
+
+.nav {
+    padding: 1%;
+    padding-left: 2%;
+    display: flex;
+    align-items: center;
+}
+
+.a {
+    font-family: "Montserrat", san-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+.button {
+    padding: 9px 20px;
+    background-color: rgb(244, 250, 255);
+    border-radius: 50px;
+    cursor: pointer;
+    border:rgb(0, 0, 0);
+    display: inline-flex;
+    white-space: nowrap;
+    align-content: flex-end;
+  }
+
+.nav image {
+    object-fit: cover;
+}
+
+.nav_links {
+    list-style: none;
+    white-space: nowrap;
+    padding-bottom: 1%;
+    padding-top: 1%;
+}
+
+.nav_links ul {
+    align-items: left;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #b1b1b1;
+}
