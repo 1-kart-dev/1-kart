@@ -4,6 +4,7 @@ import ActMenu from './ActMenu';
 
 export default function ActSecurity() {
     return(
+        <LoggedIn>
         <div className = {styles.container}>
             <ActMenu />
             <div className = {styles.security}>
@@ -25,5 +26,6 @@ export default function ActSecurity() {
                 </p>
             </div>
         </div>
+        </LoggedIn>
     );
 }

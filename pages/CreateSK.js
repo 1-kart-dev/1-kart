@@ -26,6 +26,7 @@ export default function CreateSK() {
     };
 
     return (
+        <LoggedIn>
         <div className={styles.container}>
             <div className = {styles.kartContainer}>
                 <form className={styles.form} onSubmit={submitForm}>
@@ -44,5 +45,6 @@ export default function CreateSK() {
                 </form>
             </div>
         </div>
+        </LoggedIn>
     );
 }

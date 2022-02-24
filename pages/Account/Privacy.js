@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from '../../styles/Home.module.scss'
+import LoggedIn from '../LoggedIn';
 import ActMenu from './ActMenu';
 
 export default function ActPriv() {
     return(
+        <LoggedIn>
         <div className = {styles.container}>
             <ActMenu />
             <div className = {styles.privacy}>
@@ -30,5 +32,6 @@ export default function ActPriv() {
                 </p>
             </div>
         </div>
+        </LoggedIn>
     );
 }
