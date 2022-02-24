@@ -9,11 +9,9 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { StylesProvider } from '@material-ui/core/styles';
 
 export default function KartItem() {
     return (
-        <StylesProvider injectfirst>
         <Grid container={'true'} className={styles.box} spacing={1}>
             <Grid item xs={3} sm={2}>
                 <Grid container={'true'} spacing={1}>
@@ -69,6 +67,5 @@ export default function KartItem() {
                 </Grid>
             </Grid>
         </Grid>
-        </StylesProvider>
     );
 }
