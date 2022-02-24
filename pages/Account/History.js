@@ -1,14 +1,18 @@
 import React from 'react'
 import styles from '../../styles/Home.module.scss'
 import ActMenu from './ActMenu';
+import LoggedIn from '../LoggedIn';
+import logo from '../../public/1kartCircle.jpg';
+import Image from 'next/image'
 
 export default function ActHist() {
     return(
+        <LoggedIn>
         <div className = {styles.container}>
             <ActMenu />
             <div className = {styles.history}>
                 <h2>Coming Soon</h2>
-                <img className={styles.kartLogo} src = "../1kart circle.jpg"/>
+                {/*<Image src={logo} width="70px" height="70px" alt="logo" className={styles.image}/>*/}
                 <p>
                     The History page will allow our users to see their past purchases as well as
                     any warranties they may have purchased with a specific item. They will also be able to
@@ -19,5 +23,6 @@ export default function ActHist() {
                 </p>
             </div>
         </div>
+        </LoggedIn>
     );
 }

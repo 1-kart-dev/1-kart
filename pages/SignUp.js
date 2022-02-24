@@ -39,7 +39,7 @@ export function handleErrors2(message) {
 }
 
 export default function SignUp() {
-    const [email, setEmail] = useState(null);
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [confirm, setConfirm] = useState('');
     const [errorMessage, setErrorMessage] = useState('');

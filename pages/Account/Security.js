@@ -1,14 +1,16 @@
 import React from 'react'
 import styles from '../../styles/Home.module.scss'
 import ActMenu from './ActMenu';
+import LoggedIn from '../LoggedIn';
 
 export default function ActSecurity() {
     return(
+        <LoggedIn>
         <div className = {styles.container}>
             <ActMenu />
             <div className = {styles.security}>
                 <h2>Data Security</h2>
-                <img className={styles.kartLogo} src = "../1kart circle.jpg"/>
+                {/*<img className={styles.kartLogo} src = "../1kart circle.jpg"/>*/}
                 <p>
                     The internet is a scary place, and data breaches that could expose your private information
                     do occur. At 1Kart, our database is powered by Google Firebase, and in order you to 
@@ -25,5 +27,6 @@ export default function ActSecurity() {
                 </p>
             </div>
         </div>
+        </LoggedIn>
     );
 }

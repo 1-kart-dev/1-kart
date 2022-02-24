@@ -6,6 +6,7 @@ import React, { useState, useEffect } from "react";
 import { onAuthStateChanged } from "firebase/auth";
 import { auth } from '../lib/auth'
 import axios from "axios";
+import LoggedIn from './LoggedIn';
 
 export default function CreateSK() {
     const [kart, setKart] = useState({
@@ -14,18 +15,20 @@ export default function CreateSK() {
         uid: ""
     });
 
+    useEffect(() => onAuthStateChanged(auth, (user) => {
+        if (user) {
+            console.log("currentUser:" + user.email)
+            setKart({...kart, uid: user.uid});
+        }
+    }), [])
+
     const submitForm = async (e) => {
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                console.log("currentUser:" + user.email)
-                setKart({...kart, uid: user.uid});
-            }
-        })
         e.preventDefault();
         axios.post(`/api/kart/`, kart)
     };
 
     return (
+        <LoggedIn>
         <div className={styles.container}>
             <div className = {styles.kartContainer}>
                 <form className={styles.form} onSubmit={submitForm}>
@@ -44,5 +47,6 @@ export default function CreateSK() {
                 </form>
             </div>
         </div>
+        </LoggedIn>
     );
 }

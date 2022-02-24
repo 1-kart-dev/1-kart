@@ -4,6 +4,7 @@ import Link from 'next/link';
 import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import Grid from '@mui/material/Grid';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { handleSignOut } from '../lib/auth';
 import logo from '../public/1kartCircle.jpg';
 
 export default function Navbar() {
@@ -35,7 +36,7 @@ export default function Navbar() {
             <Grid item xs={4} sm={3} md={2} align="right">
                 <ul>
                     <Link href='/Account'><button className={styles.button}><AccountBoxIcon /></button></Link>
-                    <Link href='/Account'><button className={styles.button}><LogoutIcon /></button></Link>
+                    <Link href='/'><button className={styles.button} onClick={handleSignOut}><LogoutIcon /></button></Link>
                 </ul>
             </Grid>   
         </Grid>

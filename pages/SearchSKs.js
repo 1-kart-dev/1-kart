@@ -4,6 +4,7 @@ import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline'
 import EditIcon from '@mui/icons-material/Edit'
 import Button from '@mui/material/Button'
 import AddIcon from '@mui/icons-material/Add'
+import LoggedIn from './LoggedIn'
 
 export default function SearchSks() {
     return(
@@ -21,6 +22,7 @@ export default function SearchSks() {
 
 function bs() {
     return(
+        <LoggedIn>
         <div className = {styles.container2}>
             <h2>You can create SubKarts to store different options for a particular item</h2>
             <h3>Click the Button below to get started</h3>
@@ -45,5 +47,6 @@ function bs() {
                 </div>
             </div>
         </div>
+        </LoggedIn>
     );
 }

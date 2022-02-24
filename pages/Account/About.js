@@ -8,14 +8,18 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { CardHeader } from '@mui/material';
+import LoggedIn from '../LoggedIn';
+import logo from '../../public/1kartCircle.jpg';
+import Image from 'next/image'
 
 export default function ActAbout() {
     return(
+        <LoggedIn>
         <div className = {styles.container}>
             <ActMenu/>
             <div className = {styles.about}>
                 <h2>About Us</h2>
-                <img className={styles.kartLogo} src = "../1kart circle.jpg"/>
+                {/*<Image src={logo} alt="logo" className={styles.image}/>*/}
                 <p>
                     The Development Team at 1Kart is working hard to provide the best for our
                     customers by bringing you new features and updating our current ones.
@@ -89,5 +93,6 @@ export default function ActAbout() {
                 </div>
             </div>
         </div>
+        </LoggedIn>
     );
 }

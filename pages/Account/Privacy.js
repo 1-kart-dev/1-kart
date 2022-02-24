@@ -1,14 +1,18 @@
 import React from 'react'
 import styles from '../../styles/Home.module.scss'
+import LoggedIn from '../LoggedIn';
 import ActMenu from './ActMenu';
+import logo from '../../public/1kartCircle.jpg';
+import Image from 'next/image'
 
 export default function ActPriv() {
     return(
+        <LoggedIn>
         <div className = {styles.container}>
             <ActMenu />
             <div className = {styles.privacy}>
                 <h2>Personal Privacy</h2>
-                <img className={styles.kartLogo} src = "../1kart circle.jpg"/>
+                {/*<Image src={logo} width="70px" height="70px" alt="logo" className={styles.image}/>*/}
                 <p>
                     At 1Kart your privacy is our top concern. For that reason, we allow you to 
                     control what information you give us. When you create an account the only information
@@ -30,5 +34,6 @@ export default function ActPriv() {
                 </p>
             </div>
         </div>
+        </LoggedIn>
     );
 }
