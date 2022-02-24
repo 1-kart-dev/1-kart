@@ -24,9 +24,16 @@ export default function ActMenu() {
         Router.push('/Account/About');
     }
 
+    function routeKart() {
+        Router.push('/Kart');
+    }
+
     return(
-        <div className={styles.container}>
+        <div className={styles.no_padding_container}>
             <div className = {styles.menu1}>
+                <div className = {styles.tabs}>
+                    <Button className={styles.menuBtn} onClick={routeKart}>Return to Dashboard</Button>
+                </div>
                 <div className = {styles.tabs}>
                     <Button className={styles.menuBtn} onClick={routeProfile}>Profile</Button>
                 </div>
