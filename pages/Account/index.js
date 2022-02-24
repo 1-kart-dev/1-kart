@@ -110,7 +110,7 @@ export default function Account() {
                         <Button className={styles.updateBtn} variant = "contained" color = "primary" onClick={onClick}>Update</Button>
                     </div>
                     <div className = {styles.grid9}>
-                        <img className={styles.kartLogo} src = "../1kart circle.jpg" />
+                        {/*<img className={styles.kartLogo} src = "../1kart circle.jpg" />*/}
                     </div>
                 </div>
             </div>
