@@ -266,9 +266,8 @@
   height: 100vh;
   text-align: center;
   width: 15%;
-  border: 0.1rem solid #B5B0AF;
-  border-radius: 1rem;
   float: left;
+  background: linear-gradient(rgb(244, 250, 255), rgb(255, 255, 255));
 }
 
 .tabs {
@@ -376,7 +375,7 @@
 }
 
 .menuBtn:hover {
-  background-color: blue;
+  background-color: linear-gradient(rgb(244, 250, 255), rgb(255, 255, 255));
   color: white;
 }
 
@@ -553,3 +552,95 @@
   right: 3em;
 }
 
+/* Checkout */
+
+.checkoutBox {
+  height: 75vh;
+  width: 60%;
+  margin-top: 2rem;
+  margin-left: 20%;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.checkItem {
+  width: 90%;
+  display: grid;
+  border-bottom: 2px solid grey;
+}
+
+.alignItems {
+  display: flex;
+  flex-direction: column;
+  padding-top: 1rem;
+  justify-content: space-around;
+  align-items: center;
+  gap: .5rem;
+}
+
+.totalItem {
+  width: 90%;
+  display: grid;
+  border-bottom: 2px solid grey;
+  padding-top: 14rem;
+}
+
+.estimate {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.bldTtl {
+  font-weight: bold;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.payBtn {
+  background-color: lightgreen;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  margin-bottom: .3rem;
+}
+
+.boldTxt {
+  font-weight: bold;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.italicTxt {
+  font-style: italic;
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+
+.topRight {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  text-align: right;
+}
+
+.btmRight {
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: right;
+}
+
+.checkoutBox h3 {
+  padding-top: 1rem;
+  padding-left: 2rem;
+}

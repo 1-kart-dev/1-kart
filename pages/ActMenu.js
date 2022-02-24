@@ -28,19 +28,19 @@ export default function ActMenu() {
         <div className={styles.container}>
             <div className = {styles.menu1}>
                 <div className = {styles.tabs}>
-                    <Button className={styles.menuBtn} onClick={routeProfile}>Profile</Button>
+                    <Button className={styles.menuBtn} onClick={routeProfile} color = "primary">Profile</Button>
                 </div>
                 <div className = {styles.tabs}>
-                    <Button className={styles.menuBtn} onClick={routeHistory}>History</Button>
+                    <Button className={styles.menuBtn} onClick={routeHistory} color = "primary">History</Button>
                 </div>
                 <div className = {styles.tabs}>
-                    <Button className={styles.menuBtn} onClick={routePrivacy}>Privacy</Button>
+                    <Button className={styles.menuBtn} onClick={routePrivacy} color = "primary">Privacy</Button>
                 </div>
                 <div className = {styles.tabs}>
-                    <Button className={styles.menuBtn} onClick={routeSecurity}>Security</Button>
+                    <Button className={styles.menuBtn} onClick={routeSecurity} color = "primary">Security</Button>
                 </div>
                 <div className = {styles.tabs}>
-                    <Button className={styles.menuBtn} onClick={routeAbout}>About</Button>
+                    <Button className={styles.menuBtn} onClick={routeAbout} color = "primary">About</Button>
                 </div>
             </div>
         </div>
