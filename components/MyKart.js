@@ -9,8 +9,19 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Grid from '@mui/material/Grid';
 import { StylesProvider } from '@material-ui/core/styles';
+import Button from '@mui/material/Button';
+import Router from 'next/router'
 
 export default function MyKart() {
+
+    function routeChange() {
+        Router.push('../Checkout');
+    }
+
+    function onClick() {
+        routeChange();
+    }
+
     return (
         <StylesProvider injectFirst>
             <div className={styles.KartWrapper}>
@@ -25,16 +36,13 @@ export default function MyKart() {
                         <Fleece />
                     </Stack>
                 </Stack>
-                <Grid container className={styles.footer}>
-                    <Grid item xs={1} sm={2} md={3} lg={4} />
-                    <Grid item xs={5} sm={4} md={3} lg={2}>
-                        <button className={styles.button}><Link href='/NewItem'>Add to Kart</Link></button>
-                    </Grid>
-                    <Grid item xs={5} sm={4} md={3} lg={2}>
-                        <button className={styles.button}><Link href='.'>Checkout</Link></button>
-                    </Grid>
-                    <Grid item xs={1} sm={2} md={3} lg={4} />
-                </Grid>
+                <Stack item>
+                    <Beats />
+                </Stack>
+                <Stack item>
+                    <Fleece />
+                </Stack>
+                <Button variant="contained" className={styles.checkoutBtn} onClick={onClick}>Checkout</Button>
             </div>
         </StylesProvider>
     );
