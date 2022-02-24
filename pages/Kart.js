@@ -3,11 +3,12 @@ import styles from '../styles/Kart.module.scss'
 import ReactNavbar from '../components/ReactNavbar'
 import MyKart from '../components/MyKart'
 import { useTable } from 'react-table'
+import Navbar from '../components/Navbar'
 
 export default function Kart() {
     return(
         <div>
-            <ReactNavbar />
+            <Navbar />
             <MyKart />
             {/* <div className = {styles.container}>
                 <div className = {styles.tableContainer}>

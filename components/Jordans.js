@@ -9,6 +9,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { StylesProvider } from '@material-ui/core/styles';
 
 export default function KartItem() {
     return (
@@ -35,7 +36,7 @@ export default function KartItem() {
                         <Typography variant="h6" classes={styles.itemName}><b>Jordan Retro 13</b></Typography>
                     </Grid>
                     <Grid item xs={12} className={styles.itemPrice}>
-                        <Typography variant="subtitle1"><b>$190</b></Typography>
+                        <Typography variant="subtitle1a" className={styles.itemPrice}><b>$190</b></Typography>
                         {/* INSERT RATING HERE */}
                     </Grid>
                     <Grid item xs={12} className={styles.itemDesc}>
