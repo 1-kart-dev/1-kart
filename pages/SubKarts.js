@@ -16,8 +16,7 @@ export default function SubKarts() {
         <div>
             <ReactNavbar />
             <div className = {styles.container2}>
-                <h2 className={styles.skH2}>You can create SubKarts to store different options for a particular item</h2>
-                <h3 className={styles.skH3}>Click the Button below to get started</h3>
+                <h2 className={styles.skH2}>This is a temporary page. The page will be updated as development continues!</h2>
                 <Button 
                 variant="contained" 
                 startIcon={<AddIcon />}
