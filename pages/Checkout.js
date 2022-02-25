@@ -10,6 +10,7 @@ import LoggedIn from './LoggedIn';
 
 export default function Checkout() {
     return(
+        <LoggedIn>
         <div className={styles.container}>
             <ReactNavbar />
             <div className={styles.checkoutBox}>
@@ -41,5 +42,6 @@ export default function Checkout() {
                 </Grid>
             </div>
         </div>
+        </LoggedIn>
     );
 }

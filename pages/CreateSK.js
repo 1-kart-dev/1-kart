@@ -15,13 +15,14 @@ export default function CreateSK() {
         uid: ""
     });
 
+    useEffect(() => onAuthStateChanged(auth, (user) => {
+        if (user) {
+            console.log("currentUser:" + user.email)
+            setKart({...kart, uid: user.uid});
+        }
+    }), [])
+
     const submitForm = async (e) => {
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                console.log("currentUser:" + user.email)
-                setKart({...kart, uid: user.uid});
-            }
-        })
         e.preventDefault();
         axios.post(`/api/kart/`, kart)
     };
