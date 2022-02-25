@@ -6,13 +6,40 @@ import { useTable } from 'react-table'
 import Navbar from '../components/Navbar'
 import LandingFooter from '../components/LandingFooter'
 import LoggedIn from './LoggedIn'
+import { useEffect, useState } from 'react'
+import { useAuth } from '../lib/auth'
+import axios from 'axios'
 
 export default function Kart() {
+    const { authUser, loading } = useAuth();
+    const [items, setItems] = useState([]);
+    const [kart_id, setKartId] = useState('');
+
+    useEffect(async () =>{
+        if(authUser) {
+            const uid = authUser.uid;
+            const mainKart = await axios.get(`/api/users/getMainKart/${uid}`)
+            setKartId(mainKart.data.kart_id);
+            const kartItems = await axios.get(`/api/kart/getKartItems/${mainKart.data.kart_id}`)
+            setItems(kartItems.data);
+        }
+    }, [authUser, loading ])
+
+    const handleRemove = async (item_id, item_quantity) => {
+        const res = await axios.delete('/api/kart/addRemoveKartItem/', {data: {
+            kart_id: kart_id,
+            item_id: item_id,
+            item_quantity: item_quantity,
+        }});
+        const kartItems = await axios.get(`/api/kart/getKartItems/${res.data.kart_id}`)
+        setItems(kartItems.data);
+    }
+
     return(
         <LoggedIn>
         <div>
             <Navbar />
-            <MyKart />
+            <MyKart items={items} kart_id={kart_id} handleRemove={handleRemove}/>
             <LandingFooter />
             {/* <div className = {styles.container}>
                 <div className = {styles.tableContainer}>

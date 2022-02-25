@@ -9,8 +9,23 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import axios from 'axios';
+import { useState } from 'react';
 
-export default function KartItem() {
+export default function KartItem(props) {
+    const [quantity, setQuantity] = useState(props.item.quantity);
+    
+    const handleQuantityChange = async (change) => {
+        var changedQuantity = (change == "+")? (props.item.quantity + 1) : (props.item.quantity - 1);
+        const res = await axios.put(`/api/kart/kartItemQuantity`, {
+            item_id: props.item.item_id,
+            kart_id: props.kart_id,
+            item_quantity: changedQuantity
+        })
+        setQuantity(res.data.item_quantity)
+    }
+
+
     return (
         <Grid container={'true'} className={styles.box} spacing={1}>
             <Grid item xs={3} sm={2}>
@@ -28,23 +43,25 @@ export default function KartItem() {
             </Grid>
             <Grid item xs={9} sm={10}>
                 <Grid container={'true'}>
-                    {/* ITEM NAME */}
+                    {/* ITEM NAME, PRICE / RATING, DESCRIPTION, QUANTITY / WISHLIST / SUBKART / REMOVE */}
                     <Grid item xs={12} className={styles.itemName}>
+                        <Typography variant="h6" classes={styles.itemName}><b>{props.item.item_name}</b></Typography>
                     </Grid>
                     <Grid item xs={12} className={styles.itemPrice}>
-                        {/* ITEM PRICE / RATING */}
+                    <Typography variant="subtitle1" className={styles.itemPrice}><b>${props.item.price}</b></Typography>
                     </Grid>
                     <Grid item xs={12} className={styles.itemDesc}>
                         {/* ITEM INFO / DESCRPTION */}
+                        <Typography>Size:<b>{props.item.size}</b></Typography>
                     </Grid>
                     <Grid item xs={12}>
                         <Grid container>
                             <Grid item xs={4}>
                                 {/* ITEM QUANTITY */}
                                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
-                                    <Button><RemoveCircleIcon /></Button>
-                                    <Typography>1</Typography>
-                                    <Button><AddCircleIcon /></Button>
+                                    <Button onClick={(e) => handleQuantityChange("-")}><RemoveCircleIcon /></Button>
+                                    <Typography>{quantity}</Typography>
+                                    <Button onClick={(e) => handleQuantityChange("+")}><AddCircleIcon /></Button>
                                 </Box>
                             </Grid>
                             <Grid item xs={2} sm={5}>
@@ -60,7 +77,7 @@ export default function KartItem() {
                             </Grid>
                             <Grid item xs={2} sm={1}>
                                 {/* REMOVE FROM KART BUTTON */}
-                                <Button><DeleteOutlineIcon /></Button>
+                                <Button onClick={() => props.handleRemove(props.item.item_id, quantity)}><DeleteOutlineIcon /></Button>
                             </Grid>
                         </Grid>
                     </Grid>

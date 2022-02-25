@@ -4,6 +4,7 @@ import {firestore} from 'firebase-admin';
 export default async (req, res) => {
     try {
       const { kart_id, item_id, item_quantity } = req.body;
+      console.log(kart_id);
       const itemRef = db.collection("items").doc(item_id);
       if (req.method === "PUT") {
         await db
@@ -22,7 +23,10 @@ export default async (req, res) => {
           .collection("karts")
           .doc(kart_id)
           .update({
-            items: firestore.FieldValue.arrayRemove(itemRef),
+            items: firestore.FieldValue.arrayRemove({
+              ref: itemRef,
+              quantity: item_quantity
+            }),
             updated: new Date().toISOString(),
           });
       }    
