@@ -23,7 +23,7 @@ export default async (req, res) => {
 
       await db.collection("Users").doc(uid).set({
         ...req.body,
-        subkarts: [],
+        subkarts: [kartRef],
         created: new Date().toISOString(),
       });
 
