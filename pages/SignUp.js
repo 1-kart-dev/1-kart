@@ -51,9 +51,9 @@ export default function SignUp() {
         } else if (errorMsg != "hey") {
           setErrorMessage(errorMsg);
         } else {
-          console.log(email);
-          createUser(email, password);
-          routeChange();
+          createUser(email, password).then(authUser => {
+            routeChange();
+          });
         }
     }
 
