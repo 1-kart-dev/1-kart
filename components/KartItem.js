@@ -115,7 +115,7 @@ export default function KartItem(props) {
                       }}
                       onBlur={handleQuantityFieldSubmit}
                       onKeyDown={(e) => {
-                        if (e.keyCode == 13) {
+                        if (e.code == 13) {
                           handleQuantityFieldSubmit(e);
                         }
                       }}
