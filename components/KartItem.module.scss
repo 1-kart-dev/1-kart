@@ -1,39 +1,56 @@
-@use 'variables';
+@use "variables";
 
 .box {
-    padding: 1rem;
-    background: rgb(233,234,235);
-    background: linear-gradient(180deg, rgba(233,234,235,0.75) 0%, rgba(255,255,255,1) 10%, rgba(255,255,255,1) 90%, rgba(233,234,235,1) 100%);
-    margin-right: auto;
-    grid-auto-columns: minmax(250px, 1000px);
-    grid-auto-rows: minmax(250px, auto);
-    border-top: 2px;
-    border-bottom: 2px;
+  padding: 1rem;
+  background: rgb(233, 234, 235);
+  background: linear-gradient(
+    180deg,
+    rgba(233, 234, 235, 0.75) 0%,
+    rgba(255, 255, 255, 1) 10%,
+    rgba(255, 255, 255, 1) 90%,
+    rgba(233, 234, 235, 1) 100%
+  );
+  margin-right: auto;
+  grid-auto-columns: minmax(250px, 1000px);
+  grid-auto-rows: minmax(250px, auto);
+  border-top: 2px;
+  border-bottom: 2px;
 }
 
 .images {
-    text-align: center;
+  text-align: center;
 }
 
 .text {
-    text-align: left;
+  text-align: left;
 }
 
 .itemName {
-    font-size: large;
-    text-align: left;
+  font-size: large;
+  text-align: left;
 }
 
 .itemPrice {
-    font-size: medium;
-    text-align: left;
+  font-size: medium;
+  text-align: left;
 }
 
 .itemDesc {
-    font-size: small;
-    text-align: left;
+  font-size: small;
+  text-align: left;
 }
 
 .p {
-    font-size: xx-small;
+  font-size: xx-small;
+}
+
+.muiNumberField {
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
 }
