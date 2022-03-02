@@ -35,6 +35,15 @@ function routeChange() {
 var errorMsg = "hey";
 export function handleErrors2(message) {
   errorMsg = message;
+  if (errorMsg == "auth/invalid-email") {
+    errorMsg = "Please Use A Valid Email";
+  }
+  if (errorMsg == "auth/email-already-exists") {
+    errorMsg = "An Account With This Email Already Exists";
+  }
+  if (errorMsg == "auth/invalid-password") {
+    errorMsg = "Password Must be 6 Characters Long";
+  }
 }
 
 export default function SignUp() {
