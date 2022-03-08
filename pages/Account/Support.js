@@ -1,6 +1,5 @@
 import React from 'react'
-import styles from '../../styles/Home.module.scss'
-import ActMenu from './ActMenu';
+import styles from './NewAccount.module.scss';
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
@@ -12,11 +11,10 @@ import LoggedIn from '../LoggedIn';
 import logo from '../../public/1kartCircle.jpg';
 import Image from 'next/image'
 
-export default function ActAbout() {
+export default function Support() {
     return(
         <LoggedIn>
         <div className = {styles.container}>
-            <ActMenu/>
             <div className = {styles.about}>
                 <h2>About Us</h2>
                 {/*<Image src={logo} alt="logo" className={styles.image}/>*/}
