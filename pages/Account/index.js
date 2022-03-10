@@ -26,6 +26,10 @@ export default function ActOverview() {
         Router.push('/Account/OrderHistory');
     }
 
+    function routeShoppingLists() {
+        Router.push('/Account/ShoppingLists');
+    }
+
     return(
         <LoggedIn>
             <div className={styles.container}>
@@ -43,7 +47,7 @@ export default function ActOverview() {
                         </button>
                     </div>
                     <div className={styles.btnGrid3}>
-                        <button className={styles.listsBtn}>
+                        <button className={styles.listsBtn} onClick={routeShoppingLists}>
                             <AssignmentOutlinedIcon style={{ fontSize: 30 }} /> Shopping Lists
                         </button>
                     </div>
