@@ -336,8 +336,26 @@
 
 /* Shopping Lists */
 
-.rob1 {
-    font-style: italic;
+.header {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 15px;
+    font-size: 50px;
+    text-align: center;
+}  
+
+.subheader {
+    font-family: 'Roboto', sans-serif;
+    padding-bottom: 15px;
+    font-size: 25px;
+    text-align: center;
 }
 
-  
+.button {
+    font-family: 'Roboto', sans-serif;
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 3px;
+    border: 1px solid #e1e4e8;
+    text-align: center;
+  }
+
