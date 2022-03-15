@@ -36,6 +36,18 @@ function routeChange() {
 var errorMessage = "hey";
 export function handleErrors(message) {
   errorMessage = message;
+  if (errorMessage == "auth/wrong-password") {
+    errorMessage = "Wrong Password";
+  }
+  if (errorMessage == "auth/user-not-found") {
+    errorMessage = "Email Address Not Found";
+  }
+  if (errorMessage == "auth/invalid-email") {
+    errorMessage = "Please Use A Valid Email";
+  }
+  if (errorMessage == "auth/invalid-email-verified") {
+    errorMessage = "Please Verify Your Email in Your Inbox";
+  }
 }
 
 export default function SignIn() {

@@ -3,8 +3,6 @@ import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
 import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -15,6 +13,7 @@ import styles from '../styles/Login.module.scss';
 import Router from 'next/router'
 import {useState} from 'react';
 import { createUser } from '../lib/auth'
+import PasswordStrengthBar from 'react-password-strength-bar';
 
 function Copyright(props) {
   return (
@@ -36,6 +35,15 @@ function routeChange() {
 var errorMsg = "hey";
 export function handleErrors2(message) {
   errorMsg = message;
+  if (errorMsg == "auth/invalid-email") {
+    errorMsg = "Please Use A Valid Email";
+  }
+  if (errorMsg == "auth/email-already-exists") {
+    errorMsg = "An Account With This Email Already Exists";
+  }
+  if (errorMsg == "auth/invalid-password") {
+    errorMsg = "Password Must be 6 Characters Long";
+  }
 }
 
 export default function SignUp() {
@@ -101,6 +109,7 @@ export default function SignUp() {
                   value={password}
                   onInput={e => setPassword(e.target.value)}
                 />
+                <PasswordStrengthBar password={password} />
               </Grid>
               <Grid item xs={12}>
                 <TextField
