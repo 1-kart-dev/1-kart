@@ -338,6 +338,7 @@
 
 .header {
     font-family: "Roboto", sans-serif;
+    padding-top: 30px;
     padding-bottom: 15px;
     font-size: 5rem;
     font-weight: lighter;
@@ -346,7 +347,16 @@
 
 .subheader {
     font-family: 'Roboto', sans-serif;
-    padding: 25px;
+    padding-bottom: 15px;
+    font-size: 30px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.subheader2 {
+    font-family: 'Roboto', sans-serif;
+    padding-top: 15px;
+    padding-bottom: 15px;
     font-size: 30px;
     font-weight: lighter;
     text-align: center;
@@ -354,7 +364,7 @@
 
 .button {
     font-family: 'Roboto', sans-serif;
-    padding: 15px 10px;
+    padding: 3px 10px;
     font-size: 30px;
     border-radius: 3px;
     border: 1px solid #000000;
@@ -366,6 +376,14 @@
     font-family: 'Roboto', sans-serif;
     padding: 5px;
     font-size: 25px;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.link {
+    font-family: "Roboto", sans-serif;
+    padding: 0px;
+    font-size: 5rem;
     font-weight: lighter;
     text-align: center;
 }
