@@ -38,8 +38,7 @@ export default function NewItem() {
     if (authUser) {
       const res = await axios.post("/api/item", newItem);
       const item_id = res.data.id;
-      await axios.put("/api/kart/addRemoveKartItem", {
-        kart_id: kart_id,
+      await axios.put(`/api/kart/addRemoveKartItem/${kart_id}`, {
         item_id: item_id,
         item_quantity: quantity,
       });

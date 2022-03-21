@@ -21,9 +21,8 @@ export default function KartItem(props) {
   const handleQuantityChange = async (change) => {
     var changedQuantity =
       change == "+" ? parseInt(quantity) + 1 : parseInt(quantity) - 1;
-    const res = await axios.put(`/api/kart/kartItemQuantity`, {
+    const res = await axios.put(`/api/kart/kartItemQuantity/${props.kart_id}`, {
       item_id: props.item.item_id,
-      kart_id: props.kart_id,
       item_quantity: changedQuantity,
     });
     setQuantity(res.data.item_quantity);
@@ -44,9 +43,8 @@ export default function KartItem(props) {
   };
 
   const handleQuantityFieldSubmit = async (e) => {
-    const res = await axios.put(`/api/kart/kartItemQuantity`, {
+    const res = await axios.put(`/api/kart/kartItemQuantity/${props.kart_id}`, {
       item_id: props.item.item_id,
-      kart_id: props.kart_id,
       item_quantity: quantity,
     });
     setShowQuantityField(false);
