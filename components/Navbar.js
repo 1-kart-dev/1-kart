@@ -29,7 +29,6 @@ export default function Navbar() {
                     <li className={styles.li}><a className={styles.a} href="#">My Brands</a></li>
                     <li className={styles.li}><a className={styles.a} href="#">Shipping</a></li>
                     <li className={styles.li}><a className={styles.a} href="#">History</a></li>
-                    <li className={styles.li}><a className={styles.a} href="#">Wishlist</a></li>
                 </ul>
             </Grid>
             <Grid item xs={4} sm={3} md={2} align="right">
