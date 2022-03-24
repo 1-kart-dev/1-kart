@@ -26,6 +26,10 @@ export default function ActOverview() {
         Router.push('/Account/OrderHistory');
     }
 
+    function routeWarranty() {
+        Router.push('/Account/Warranties');
+    }
+
     return(
         <LoggedIn>
             <div className={styles.container}>
@@ -48,7 +52,7 @@ export default function ActOverview() {
                         </button>
                     </div>
                     <div className={styles.btnGrid4}>
-                        <button className={styles.warrantyBtn}>
+                        <button className={styles.warrantyBtn} onClick={routeWarranty}>
                             <VerifiedUserOutlinedIcon style={{ fontSize: 30 }} /> Warranties
                         </button>
                     </div>
