@@ -10,15 +10,8 @@ export default function ShoppningLists()
 {
     return(
         <div className={styles.container}>
-            <h1 className={styles.header}>Restyled Shopping List</h1>
+            <h1 className={styles.header}>Your Lists</h1>
             <h2 className={styles.subheader}>Items of Interest</h2>
-            <h3 className={styles.button}>Currently, we are working hard to improve the layout of our website. Our team will have the final product very shortly. Thank you for your consideration. Go 1Kart.</h3>
-            <h4 className={styles.subheader2}>Here at 1Kart, we are a team of</h4>
-            <ul>
-            <li className={styles.list}>technologists</li>
-            <li className={styles.list}>thinkers</li>
-            <li className={styles.list}>builders</li>
-            </ul>
             <h3 className={styles.subheader2}>Want to add something to your cart? Try our add to shopping cart feature!</h3>
             <Stack>
                 <IconButton href="http://localhost:3000/NewItem" color="primary" aria-label="add to shopping cart">
@@ -34,7 +27,8 @@ export default function ShoppningLists()
                     height={100}
                 />
             </center>
-        </div>
+            
+        </div>     
     );
 }
 
