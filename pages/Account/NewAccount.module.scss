@@ -388,3 +388,18 @@
     text-align: center;
 }
 
+.shoppingLists {
+    float: left;
+    margin: .2rem;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+    padding-left: 2rem;
+}
+
+.wishLists {
+    float: right;
+    margin: .2rem;
+    padding-bottom: 100%;
+    margin-bottom: -100%;
+    padding-right: 5rem;
+}

@@ -27,7 +27,14 @@ export default function ShoppningLists()
                     height={100}
                 />
             </center>
-            
+            <div className={styles.content}>
+                <div className={styles.shoppingLists}>
+                    <h2>Shopping Lists</h2>
+                </div>
+                <div className={styles.wishLists}>
+                    <h2 className={styles.column}>Wish Lists</h2>
+                </div>
+            </div>
         </div>     
     );
 }
