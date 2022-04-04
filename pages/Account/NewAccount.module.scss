@@ -389,17 +389,22 @@
 }
 
 .shoppingLists {
+    font-family: "Roboto", sans-serif;
     float: left;
     margin: .2rem;
     padding-bottom: 100%;
     margin-bottom: -100%;
-    padding-left: 2rem;
+    padding-left: 6rem;
+    font-weight: lighter;
 }
 
 .wishLists {
+    font-family: "Roboto", sans-serif;
+    font-size: 3rem;
     float: right;
     margin: .2rem;
     padding-bottom: 100%;
     margin-bottom: -100%;
-    padding-right: 5rem;
+    padding-right: 6rem;
+    font-weight: lighter;
 }
