@@ -340,14 +340,13 @@
     font-family: "Roboto", sans-serif;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 5rem;
+    font-size: 7rem;
     font-weight: lighter;
     text-align: center;
 }  
 
 .subheader {
     font-family: 'Roboto', sans-serif;
-    padding-bottom: 1rem;
     font-size: 3rem;
     font-weight: lighter;
     text-align: center;
@@ -389,22 +388,27 @@
 }
 
 .shoppingLists {
-    font-family: "Roboto", sans-serif;
     float: left;
     margin: .2rem;
     padding-bottom: 100%;
     margin-bottom: -100%;
     padding-left: 6rem;
     font-weight: lighter;
+    // background-color: #0011ff;
 }
 
 .wishLists {
-    font-family: "Roboto", sans-serif;
-    font-size: 3rem;
     float: right;
     margin: .2rem;
     padding-bottom: 100%;
     margin-bottom: -100%;
     padding-right: 6rem;
     font-weight: lighter;
+}
+
+.lowerText {
+    font-family: "Roboto", sans-serif;
+    padding: 0.2rem;
+    font-size: 2rem;
+    text-align: right;
 }
