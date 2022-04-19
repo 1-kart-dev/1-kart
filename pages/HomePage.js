@@ -120,8 +120,8 @@ export default function HomePage() {
                         </p>
                         </div>
                         <div className="ud-hero-buttons">
-                            <a href='#waitlist'>
-                                <Button class="ud-main-btn" variant="contained">Join the Waitlist</Button>
+                            <a href='#waitlist' className="ud-main-btn">
+                                Join the Waitlist
                             </a>
                         </div>
                         <div
