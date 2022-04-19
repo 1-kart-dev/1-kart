@@ -231,7 +231,7 @@ export default function HomePage() {
                         <p>
                         Customers can now enjoy their mindless online shopping with a home 
                         base to organize all their findings, 
-                        so they can revisit and make a purchase once they’re ready. 
+                        so they can revisit and make a purchase once they&apos;re ready. 
                         1-kart wants to offer every shopper the power to find & organize the 
                         products that best represent their lifestyle and make a purchase 
                         decision when they&apos;re ready.
@@ -879,7 +879,7 @@ export default function HomePage() {
                         data-wow-delay=".2s"
                         >
                         {show && <h3 className="ud-contact-form-title">Sign up for the waitlist</h3>}
-                        {!show && <h3 className="ud-contact-form-title">You're signed up for the waitlist!</h3>}
+                        {!show && <h3 className="ud-contact-form-title">You&apos;re signed up for the waitlist!</h3>}
                         {show && <form className="ud-contact-form">
                             <div className="ud-form-group">
                             <label htmlFor="fullName">Full Name*</label>
