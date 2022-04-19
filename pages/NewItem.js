@@ -124,7 +124,6 @@ export default function NewItem() {
             }}
             error={qError}
             helperText={qError ? "Quantity must be at least 1" : ""}
-            required
             InputProps={{ inputProps: { min: 1 } }}
           />
           <Button
