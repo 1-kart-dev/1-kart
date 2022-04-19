@@ -14,6 +14,33 @@ import Router from 'next/router'
 import {useState} from 'react';
 import { createUser } from '../lib/auth'
 import PasswordStrengthBar from 'react-password-strength-bar';
+import {styled} from '@mui/material/styles';
+
+const CssTextField = styled(TextField)({
+  '& input': {
+    color: 'white',
+  },
+  '& label': {
+    color: 'white',
+  },
+  '& label.Mui-focused': {
+    color: '#a2d6ef',
+  },
+  '& .MuiInput-underline:after': {
+    borderBottomColor: 'green',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'white',
+    },
+    '&:hover fieldset': {
+      borderColor: '#a2d6ef',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#a2d6ef',
+    },
+  },
+});
 
 function Copyright(props) {
   return (
@@ -77,7 +104,7 @@ export default function SignUp() {
             alignItems: 'center',
           }}
         >
-          <Avatar sx={{ m: 1, bgcolor: '#c9e4f5' }}>
+          <Avatar sx={{ m: 1, bgcolor: '#a2d6ef' }}>
             <LockOutlinedIcon />
           </Avatar>
           <Typography component="h1" variant="h5">
@@ -86,7 +113,8 @@ export default function SignUp() {
           <Box component="form" noValidate sx={{ mt: 3 }}>
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <TextField
+                <CssTextField
+                  className={styles.textField}
                   required
                   fullWidth
                   id="email"
@@ -95,10 +123,11 @@ export default function SignUp() {
                   autoComplete="email"
                   value={email}
                   onInput={e => setEmail(e.target.value)}
+                  
                 />
               </Grid>
               <Grid item xs={12}>
-                <TextField
+                <CssTextField
                   required
                   fullWidth
                   name="password"
@@ -112,7 +141,7 @@ export default function SignUp() {
                 <PasswordStrengthBar password={password} />
               </Grid>
               <Grid item xs={12}>
-                <TextField
+                <CssTextField
                   required
                   fullWidth
                   name="confirm"
@@ -128,7 +157,7 @@ export default function SignUp() {
               type="button"
               fullWidth
               variant="contained"
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2, background: "#a2d6ef"}}
               onClick={onClick}
             >
               Sign Up

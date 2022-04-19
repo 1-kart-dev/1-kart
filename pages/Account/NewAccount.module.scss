@@ -1,10 +1,12 @@
 @use 'variables';
 
 .container {
+    background-color: #000000;
     padding: 0 2rem;
 }
 
 .container h2 {
+    
     padding-top: 1rem;
     margin-left: 2rem;
 }
@@ -17,6 +19,7 @@
     text-align: center;
     row-gap: 2rem;
     padding-bottom: 15rem;
+    background-color: #000000;
 }
 
 .btnGrid1 {
@@ -237,6 +240,7 @@
 /* Order History */
 
 .history {
+    
     float: left;
     height: 100vh;
     width: 80%;

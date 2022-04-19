@@ -1,11 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../styles/Home.module.scss'
 import ReactNavbar from '../components/ReactNavbar'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
+import logo from '../public/1kartCircle.png';
+import { Button } from '@material-ui/core'
+import axios from 'axios'
 
 export default function HomePage() {
+    const [waitlistForm, setWaitlistForm] = useState({})
+    const [show, setShow] = useState(true)
+    const handleSubmitWaitlist = async (e) => {
+        await axios.post('/api/waitlist/', waitlistForm)
+        setShow(false)
+    }
+
     return(
         <div>
             {/* <ReactNavbar /> */}
@@ -19,7 +29,12 @@ export default function HomePage() {
                             <span className="toggler-icon"> </span>
                             <span className="toggler-icon"> </span>
                         </button>
+                        
                         <div className="navbar-collapse">
+                        <div className="navbar-btn d-none d-sm-inline-block">
+                            <Image src={logo} width="70px" height="70px" alt="logo"/>
+                        </div>
+                        <h2>1kart</h2>
                             <ul id="nav" className="navbar-nav mx-auto">
                             <li className="nav-item">
                                 <a className="ud-menu-scroll" href="#home">Home</a>
@@ -32,7 +47,7 @@ export default function HomePage() {
                                 <a className="ud-menu-scroll" href="#team">Team</a>
                             </li>
                             <li className="nav-item">
-                                <a className="ud-menu-scroll" href="#contact">Contact</a>
+                                <a className="ud-menu-scroll" href="#waitlist">Waitlist</a>
                             </li>
                             <li className="nav-item nav-item-has-children">
                                 <a href="javascript:void(0)"> Pages </a>
@@ -92,21 +107,28 @@ export default function HomePage() {
                     <div className="row">
                     <div className="col-lg-12">
                         <div className="ud-hero-content wow fadeInUp" data-wow-delay=".2s">
+                        <div className="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
+                        <Image src={logo} width="200px" height="200px" alt="logo"/>
+                        </div>
                         <h1 className="ud-hero-title">
-                            The New Way to Shop
+                            <span className="ud-hero-title-color-2">Shop Smart.</span> <br/>
+                            1kart.
                         </h1>
                         <p className="ud-hero-desc">
                         Organize all of the products that grab your attention, without the hassle. 
                         1kart gives you the tools to purchase, manage, and organize all e-commerce to best fit your purchase agenda.
                         </p>
                         </div>
+                        <div className="ud-hero-buttons">
+                            <a href='#waitlist' className="ud-main-btn">
+                                Join the Waitlist
+                            </a>
+                        </div>
                         <div
                         className="ud-hero-brands-wrapper wow fadeInUp"
                         data-wow-delay=".3s"
                         >
-                        </div>
-                        <div className="ud-hero-image wow fadeInUp" data-wow-delay=".25s">
-                        </div>
+                        </div>                        
                     </div>
                     </div>
                 </div>
@@ -120,7 +142,7 @@ export default function HomePage() {
                         <h2>Your Tool Kit</h2>
                         <p>
                             There are many variations of passages of Lorem Ipsum available
-                            but the majority have suffered alteration in some form.
+                            but the majority have suffered alteration in some .
                         </p>
                         </div>
                     </div>
@@ -231,7 +253,7 @@ export default function HomePage() {
                         <h2>Our Pricing Plans</h2>
                         <p>
                             There are many variations of passages of Lorem Ipsum available
-                            but the majority have suffered alteration in some form.
+                            but the majority have suffered alteration in some .
                         </p>
                         </div>
                     </div>
@@ -816,16 +838,16 @@ export default function HomePage() {
                     </div>
                 </div>
                 </section>
-                <section id="contact" className="ud-contact">
+                <section id="waitlist" className="ud-contact">
                 <div className="container">
                     <div className="row align-items-center">
                     <div className="col-xl-8 col-lg-7">
                         <div className="ud-contact-content-wrapper">
                         <div className="ud-contact-title">
-                            <span>CONTACT US</span>
+                            <span>WAITLIST</span>
                             <h2>
-                            Let’s talk about <br />
-                            Love to hear from you!
+                            Join the waitlist <br />
+                             to be notified when 1kart goes live
                             </h2>
                         </div>
                         <div className="ud-contact-info-wrapper">
@@ -856,46 +878,46 @@ export default function HomePage() {
                         className="ud-contact-form-wrapper wow fadeInUp"
                         data-wow-delay=".2s"
                         >
-                        <h3 className="ud-contact-form-title">Send us a Message</h3>
-                        <form className="ud-contact-form">
+                        {show && <h3 className="ud-contact-form-title">Sign up for the waitlist</h3>}
+                        {!show && <h3 className="ud-contact-form-title">You're signed up for the waitlist!</h3>}
+                        {show && <form className="ud-contact-form">
                             <div className="ud-form-group">
                             <label htmlFor="fullName">Full Name*</label>
                             <input
+                                required
                                 type="text"
                                 name="fullName"
                                 placeholder="John Doe"
+                                onChange={(e) => setWaitlistForm({...waitlistForm, name: e.target.value})}
                             />
                             </div>
                             <div className="ud-form-group">
                             <label htmlFor="email">Email*</label>
                             <input
+                                required
                                 type="email"
                                 name="email"
                                 placeholder="example@yourmail.com"
+                                onChange={(e) => setWaitlistForm({...waitlistForm, email: e.target.value})}
                             />
                             </div>
                             <div className="ud-form-group">
                             <label htmlFor="phone">Phone*</label>
                             <input
+                                required
                                 type="text"
                                 name="phone"
                                 placeholder="(123) 456-7890"
+                                onChange={(e) => setWaitlistForm({...waitlistForm, phone: e.target.value})}
                             />
                             </div>
-                            <div className="ud-form-group">
-                            <label htmlFor="message">Message*</label>
-                            <textarea
-                                name="message"
-                                rows="1"
-                                placeholder="type your message here"
-                            ></textarea>
-                            </div>
+                            
                             <div className="ud-form-group mb-0">
-                            <button type="submit" className="ud-main-btn">
-                                Send Message
+                            <button type="button" className="ud-main-btn" onClick={async (e)=> await handleSubmitWaitlist(e)}>
+                                Sign up
                             </button>
                             </div>
-                        </form>
+                        </form>}
                         </div>
                     </div>
                     </div>

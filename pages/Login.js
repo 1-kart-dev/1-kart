@@ -15,6 +15,36 @@ import styles from '../styles/Login.module.scss';
 import {useState} from 'react'
 import {signIn} from '../lib/auth'
 import Router from 'next/router'
+import {styled} from '@mui/material/styles'
+
+const CssTextField = styled(TextField)({
+  '& input': {
+    color: 'white',
+  },
+  '& input:-webkit-autofill': {
+    transition: "background-color 50000s ease-in-out 0s, color 5000s ease-in-out 0s",
+  },
+  '& label': {
+    color: 'white',
+  },
+  '& label.Mui-focused': {
+    color: '#a2d6ef',
+  },
+  '& .MuiInput-underline:after': {
+    borderBottomColor: 'green',
+  },
+  '& .MuiOutlinedInput-root': {
+    '& fieldset': {
+      borderColor: 'white',
+    },
+    '&:hover fieldset': {
+      borderColor: '#a2d6ef',
+    },
+    '&.Mui-focused fieldset': {
+      borderColor: '#a2d6ef',
+    },
+  },
+});
 
 function Copyright(props) {
   return (
@@ -89,7 +119,7 @@ export default function SignIn() {
             Sign in
           </Typography>
           <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
-            <TextField
+            <CssTextField
               margin="normal"
               required
               fullWidth
@@ -101,7 +131,7 @@ export default function SignIn() {
               value={email}
               onInput={e => setEmail(e.target.value)}
             />
-            <TextField
+            <CssTextField
               margin="normal"
               required
               fullWidth
@@ -119,7 +149,7 @@ export default function SignIn() {
               fullWidth
               variant="contained"
               onClick={onClick}
-              sx={{ mt: 3, mb: 2 }}
+              sx={{ mt: 3, mb: 2, background: "#a2d6ef" }}
             >
               Sign In
             </Button>

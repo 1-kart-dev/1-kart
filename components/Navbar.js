@@ -5,7 +5,7 @@ import AccountBoxIcon from '@material-ui/icons/AccountBox';
 import Grid from '@mui/material/Grid';
 import LogoutIcon from '@mui/icons-material/Logout';
 import { handleSignOut } from '../lib/auth';
-import logo from '../public/1kartCircle.jpg';
+import logo from '../public/1kartCircle.png';
 
 export default function Navbar() {
     // const [width, setWidth] = useState(null);

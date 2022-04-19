@@ -13,10 +13,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
   --font: "Inter", sans-serif;
-  --body-color: #637381;
-  --heading-color: #212b36;
-  --primary-color: #d2f7ff;
-  --secondary-color: #f0b2ff;
+  --body-color: #a2d6ef;
+  --heading-color: #a2d6ef;
+  --primary-color: #000000;
+  --secondary-color: #545154;
   --white: #ffffff;
   --black: #242424;
   --grey: #7e7e7e;
@@ -155,7 +155,7 @@ p {
   z-index: 5;
   -webkit-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
-  background: var(--primary-color);
+  background: var(--heading-color);
 }
 
 .ud-main-btn:hover {
@@ -330,7 +330,7 @@ p {
 .navbar-nav .nav-item > a {
   font-size: 16px;
   font-weight: 400;
-  color: var(--black);
+  color: var(--heading-color);
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   padding: 25px 8px;
@@ -533,12 +533,16 @@ p {
 }
 
 .ud-hero-content .ud-hero-title {
-  color: rgb(44, 44, 44);/*var(--black);*/
+  color: var(--heading-color);
   font-weight: 700;
   font-size: 45px;
   line-height: 60px;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.ud-hero-title .ud-hero-title-color-2{
+  color: var(--secondary-color);
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -560,7 +564,7 @@ p {
   font-size: 20px;
   line-height: 35px;
   text-align: center;
-  color: var(--black);
+  color: var(--grey);
   opacity: 0.8;
   max-width: 600px;
   margin: auto;
@@ -840,7 +844,7 @@ p {
   font-weight: 500;
   font-size: 14px;
   color: var(--black);
-  background: var(--primary-color);
+  background: var(--body-color);
   padding: 5px 20px;
   display: inline-block;
   margin-bottom: 20px;
