@@ -36,12 +36,12 @@ export default function MyKart(props) {
                         <KartItem item={item} kart_id={props.kart_id} handleRemove={props.handleRemove}/>
                     </Stack>)
                 })}
-                <Grid container>
+                <Grid container sx={{background: "black"}}>
                     <Grid item align="left" p={1}>
-                        <Button variant="contained" className={styles.checkoutBtn} onClick={() => Router.push("/NewItem")}>Add Item to Kart</Button>
+                        <Button sx={{background: "#a2d6ef"}} variant="contained" onClick={() => Router.push("/NewItem")}>Add Item to Kart</Button>
                     </Grid>
                     <Grid item align="right" p={1}>
-                        <Button variant="contained" className={styles.checkoutBtn} onClick={onClick}>Checkout</Button>
+                        <Button sx={{background: "#a2d6ef"}} variant="contained" onClick={onClick}>Checkout</Button>
                     </Grid>
                 </Grid>
             </div>
