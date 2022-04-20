@@ -15,7 +15,8 @@ export default function Kart() {
   const [items, setItems] = useState([]);
   const [kart_id, setKartId] = useState("");
 
-  useEffect(async () => {
+  useEffect(() => {
+    async function fetchData() {
     if (authUser) {
       const uid = authUser.uid;
       const mainKart = await axios.get(`/api/users/getMainKart/${uid}`);
@@ -24,7 +25,8 @@ export default function Kart() {
         `/api/kart/getKartItems/${mainKart.data.kart_id}`
       );
       setItems(kartItems.data);
-    }
+    }}
+    fetchData();
   }, [authUser, loading]);
 
   const handleRemove = async (item_id, item_quantity) => {

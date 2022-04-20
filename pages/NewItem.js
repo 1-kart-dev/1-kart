@@ -26,12 +26,14 @@ export default function NewItem() {
   const [kart_id, setKartId] = useState("");
   const [qError, setQError] = useState(false);
 
-  useEffect(async () => {
+  useEffect(() => {
+    async function fetchData(){
     if (authUser) {
       const uid = authUser.uid;
       const mainKart = await axios.get(`/api/users/getMainKart/${uid}`);
       setKartId(mainKart.data.kart_id);
-    }
+    }}
+    fetchData();
   }, [authUser, loading]);
 
   const handleSubmit = async (e) => {
